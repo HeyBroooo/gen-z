@@ -1,8 +1,7 @@
+import Link from 'next/link'
+import React from 'react'
 
-import Link from "next/link";
-import React from "react";
-
-const Tshirts = () => {
+const stickers = () => {
   return (
     <div>
       <section class="text-gray-600 body-font">
@@ -14,7 +13,7 @@ const Tshirts = () => {
                 <img
                   alt="ecommerce"
                   class="m-auto md:h-[30vh] m-auto md:h-[30vh] h-[36vh] block"
-                  src="https://m.media-amazon.com/images/I/613KABeTdwL._UY741_.jpg"
+                  src="https://m.media-amazon.com/images/I/61AssSXffkL._SX522_.jpg"
                 />
               </a>
               <div class="mt-4 text-center">
@@ -34,7 +33,7 @@ const Tshirts = () => {
                 <img
                   alt="ecommerce"
                   class="m-auto md:h-[30vh] h-[36vh] block"
-                  src="https://m.media-amazon.com/images/I/613KABeTdwL._UY741_.jpg"
+                  src="https://m.media-amazon.com/images/I/61AssSXffkL._SX522_.jpg"
                 />
               </a>
               <div class="mt-4 text-center">
@@ -54,7 +53,7 @@ const Tshirts = () => {
                 <img
                   alt="ecommerce"
                   class="m-auto md:h-[30vh] h-[36vh] block"
-                  src="https://m.media-amazon.com/images/I/613KABeTdwL._UY741_.jpg"
+                  src="https://m.media-amazon.com/images/I/61AssSXffkL._SX522_.jpg"
                 />
               </a>
               <div class="mt-4 text-center">
@@ -74,7 +73,7 @@ const Tshirts = () => {
                 <img
                   alt="ecommerce"
                   class="m-auto md:h-[30vh] h-[36vh] block"
-                  src="https://m.media-amazon.com/images/I/613KABeTdwL._UY741_.jpg"
+                  src="https://m.media-amazon.com/images/I/61AssSXffkL._SX522_.jpg"
                 />
               </a>
               <div class="mt-4 text-center">
@@ -94,7 +93,7 @@ const Tshirts = () => {
                 <img
                   alt="ecommerce"
                   class="m-auto md:h-[30vh] h-[36vh] block"
-                  src="https://m.media-amazon.com/images/I/613KABeTdwL._UY741_.jpg"
+                  src="https://m.media-amazon.com/images/I/61AssSXffkL._SX522_.jpg"
                 />
               </a>
               <div class="mt-4 text-center">
@@ -114,7 +113,7 @@ const Tshirts = () => {
                 <img
                   alt="ecommerce"
                   class="m-auto md:h-[30vh] h-[36vh] block"
-                  src="https://m.media-amazon.com/images/I/613KABeTdwL._UY741_.jpg"
+                  src="https://m.media-amazon.com/images/I/61AssSXffkL._SX522_.jpg"
                 />
               </a>
               <div class="mt-4 text-center">
@@ -134,7 +133,7 @@ const Tshirts = () => {
                 <img
                   alt="ecommerce"
                   class="m-auto md:h-[30vh] h-[36vh] block"
-                  src="https://m.media-amazon.com/images/I/613KABeTdwL._UY741_.jpg"
+                  src="https://m.media-amazon.com/images/I/61AssSXffkL._SX522_.jpg"
                 />
               </a>
               <div class="mt-4 text-center">
@@ -154,7 +153,7 @@ const Tshirts = () => {
                 <img
                   alt="ecommerce"
                   class="m-auto md:h-[30vh] h-[36vh] block"
-                  src="https://m.media-amazon.com/images/I/613KABeTdwL._UY741_.jpg"
+                  src="https://m.media-amazon.com/images/I/61AssSXffkL._SX522_.jpg"
                 />
               </a>
               <div class="mt-4 text-center">
@@ -174,7 +173,7 @@ const Tshirts = () => {
         
       </section>
     </div>
-  );
-};
+  )
+}
 
-export default Tshirts;
+export default stickers
