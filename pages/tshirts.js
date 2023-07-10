@@ -7,7 +7,7 @@ const Tshirts = () => {
     <div>
       <section class="text-gray-600 body-font">
         <div class="container px-5 py-24 mx-auto">
-          <div class="flex flex-wrap -m-4">
+          <div class="flex flex-wrap -m-4 justify-center">
 
           <Link href={'/product/fashion-meets-comfort'} > <div class="md: p-4 w-full cursor-pointer shadow-lg m-5">
               <a class="block relative  rounded overflow-hidden">
