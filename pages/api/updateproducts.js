@@ -11,11 +11,10 @@ const handler =  async  (req, res)=> {
 
 }
     else{
-        res.status(400).json({error: "this method is not allowed"})
+        res.status(400).json({error: "this method is not allowed to update product"})
 
     }
     
   }
   
-
 export default connectDb(handler);

@@ -57,13 +57,13 @@ const Navbar = ({ cart, clearCart, subTotal, removeFromCart, addToCart }) => {
       <div
         className="cursor-pointer cart absolute right-0 top-6 mx-5 flex"
       >
-        <Link href={'/login'}><MdAccountCircle className="text-xl md:text-2xl mx-2" /></Link>
+        <Link href={'/'}><MdAccountCircle className="text-xl md:text-2xl mx-2" /></Link>
         <AiOutlineShoppingCart  onClick={toggleCart} className="text-xl md:text-3xl" />
       </div>
 
       <div
         ref={ref}
-        className={`w-72 h-[100vh] cursor-pointer text-indigo-500 sideCart absolute top-0 right-0 bg-indigo-100 p-10 px-8 transform transition-transform ${Object.keys(cart).length !==0 ? 'translate-x-0': 'translate-x-full'} `}
+        className={`w-72 h-[100vh] overflow-scrollcursor-pointer text-indigo-500 sideCart absolute top-0 right-0 bg-indigo-100 p-10 px-8 transform transition-transform ${Object.keys(cart).length !==0 ? 'translate-x-0': 'translate-x-full'} `}
       >
         <h2 className="font-bold text-xl text-center"> Shopping Cart </h2>
         <span

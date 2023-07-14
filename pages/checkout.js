@@ -4,6 +4,11 @@ import {
   AiFillPlusCircle,
   AiFillMinusCircle,
 } from "react-icons/ai";
+import { useEffect } from "react";
+
+
+   
+
 
 const Checkout = ({clearCart,cart,addToCart,removeFromCart,subTotal}) => {
   return (

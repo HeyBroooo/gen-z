@@ -1,4 +1,6 @@
-const mongoose = require("mongoose");
+// const mongoose = require("mongoose");
+import mongoose from "mongoose";
+
 
 const ProductSchema = new mongoose.Schema(
   {
@@ -15,14 +17,16 @@ const ProductSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-let Product;
+ let Product;
+mongoose.model = {}
 
-try {
-  // Check if the model is already defined
-  Product = mongoose.model("Product");
-} catch (error) {
-  // Define the model if it's not already defined
-  Product = mongoose.model("Product", ProductSchema);
-}
+ try {
+     // Check if the model is already defined
+   Product = mongoose.model("Product");
+ } catch (error) {
+//   // Define the model if it's not already defined
+   Product = mongoose.model("Product", ProductSchema);
+ }
 
-module.exports = Product;
+ module.exports = Product;
+export default mongoose.model("Product", ProductSchema);
