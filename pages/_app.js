@@ -2,14 +2,28 @@ import { useEffect, useState } from "react";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import "../styles/globals.css";
+import LoadingBar from 'react-top-loading-bar'
 import { useRouter } from "next/router";
 
 function MyApp({ Component, pageProps }) {
   const [cart, setCart] = useState({});
   const [subTotal, setSubTotal] = useState(0);
+  const [progress, setProgress] = useState(0)
   const router = useRouter();
 
+
+  
+
   useEffect(() => {
+    router.events.on('routeChangeComplete', ()=> {
+      setProgress(100)
+    })
+
+    router.events.on('routeChangeStart', ()=> {
+      setProgress(40)
+    })
+
+
     try {
       if (localStorage.getItem("cart")) {
         setCart(JSON.parse(localStorage.getItem("cart")));
@@ -69,6 +83,12 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
+     <LoadingBar
+        color='#800080'
+        progress={progress}
+        waitingTime={500}
+        onLoaderFinished={() => setProgress(0)}
+      />
       <Navbar
         key={subTotal}
         cart={cart}
