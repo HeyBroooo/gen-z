@@ -52,22 +52,22 @@ const Checkout = ({ clearCart, cart, addToCart, removeFromCart, subTotal }) => {
 
   // }
   // const StripeCheckOutButton = () => {
-    const handleCheckout = async () => {
+    // const handleCheckout = async () => {
 
-      const products = () =>  [
-       {
-        product: 1,
-        name: "charli",
-        price: 12,
-      },
-    ];
-      const response = await fetch("/api/stripe-session/", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        cache: "no-cache",
-        body: JSON.stringify({products}),
-      });
-    };
+    //   const products = () =>  [
+    //    {
+    //     product: 1,
+    //     name: "charli",
+    //     price: 12,
+    //   },
+    // ];
+    //   const response = await fetch("/api/stripe-session/", {
+    //     method: "POST",
+    //     headers: { "Content-Type": "application/json" },
+    //     cache: "no-cache",
+    //     body: JSON.stringify({products}),
+    //   });
+    // };
   
     return (
       <div className="container px-2 sm:m-auto">
@@ -225,12 +225,13 @@ const Checkout = ({ clearCart, cart, addToCart, removeFromCart, subTotal }) => {
           </ol>
         </div>
         <div className="mx-4">
+          <Link href="https://buy.stripe.com/9AQ4k85KP8WMa08cMM">
           <button
-            onClick={handleCheckout}
             className="flex mr-2 text-white bg-indigo-500 border-0 py-2 px-2 focus:outline-none hover:bg-indigo-500 rounded text-sm"
           >
             Pay ₹ {subTotal}
           </button>
+          </Link>
         </div>
       </div>
     );
