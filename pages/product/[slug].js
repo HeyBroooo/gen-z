@@ -22,7 +22,6 @@ const Post = ({ addToCart, product, varients, buyNow }) => {
     SetPin(e.target.value);
   };
 
-
   const notify = () => toast.success("Added To Cart");
 
   return (
@@ -187,15 +186,21 @@ const Post = ({ addToCart, product, varients, buyNow }) => {
 
                 <button
                   onClick={() => {
-                    addToCart(slug, 1, 499, 'Fashion Meets Comfort(XL, RED)', 'XL', 'RED');
-                    toast.success('Added To Cart 😇');
+                    addToCart(
+                      slug,
+                      1,
+                      499,
+                      "Fashion Meets Comfort(XL, RED)",
+                      "XL",
+                      "RED"
+                    );
+                    toast.success("Added To Cart 😇");
                   }}
                   className="flex ml-8 text-white bg-indigo-500 border-0 py-2 px-2 md:px-6 focus:outline-none hover:bg-indigo-600 rounded"
                 >
                   Add to Cart
                   <ToastContainer />
                 </button>
-
 
                 <button
                   onClick={() => {

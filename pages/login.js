@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Login = () => {
@@ -45,12 +46,9 @@ const Login = () => {
                   Password
                 </label>
                 <div class="text-sm">
-                  <a
-                    href="/forgot"
-                    class="font-semibold text-indigo-600 hover:text-indigo-500"
-                  >
-                    Forgot password?
-                  </a>
+                  <Link legacyBehavior href="/forgot/">
+                    <a>Forgot Password</a>
+                  </Link>
                 </div>
               </div>
               <div class="mt-2">
