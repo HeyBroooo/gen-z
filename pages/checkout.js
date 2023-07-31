@@ -45,7 +45,7 @@ const Checkout = ({ clearCart, cart, addToCart, removeFromCart, subTotal }) => {
       handler: function (response) {
         // Get the payment ID from the response
         const paymentId = response.razorpay_payment_id;
-        const successMessage = "Payment Successfully";
+        const successMessage = "Payment Successfully Done";
       
         // Redirect the user to the new page with the payment details as query parameters
         window.location.href = `/payment?razorpay_payment_id=${paymentId}&success_message=${successMessage}`;
@@ -53,7 +53,7 @@ const Checkout = ({ clearCart, cart, addToCart, removeFromCart, subTotal }) => {
       
     
       prefill: {
-        name: "HoodieHub",
+        name: "",
       },
 
       // if(response.razorpay_payment_id)
