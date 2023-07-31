@@ -7,6 +7,62 @@ import Head from "next/head";
 import Script from "next/script";
 
 const Checkout = ({ clearCart, cart, addToCart, removeFromCart, subTotal }) => {
+  const loadScript = (src) => {
+    return new Promise((resolve) => {
+      const script = document.createElement("script");
+      script.src = src;
+
+      script.onload = () => {
+        resolve(true);
+      };
+
+      script.onerror = () => {
+        resolve(false);
+      };
+
+      document.body.appendChild(script);
+    });
+  };
+
+  const displayRazorpay = async (amount) => {
+    const res = await loadScript(
+      "https://checkout.razorpay.com/v1/checkout.js"
+    );
+
+    if (!res) {
+      alert("you are offline.. failed to load SDK");
+      return;
+    }
+
+    const option = {
+      key: "rzp_test_hF8LqnBYn1ypf4",
+      currency: "INR",
+      amount: amount * 100,
+      name: "HoodieHub",
+      description: "Where Your Style Meets Comfort",
+      image: "https://logopond.com/logos/135af52a1edf5f647f853707244622e0.png",
+
+      handler: function (response) {
+        // Get the payment ID from the response
+        const paymentId = response.razorpay_payment_id;
+        const successMessage = "Payment Successfully";
+      
+        // Redirect the user to the new page with the payment details as query parameters
+        window.location.href = `/payment?razorpay_payment_id=${paymentId}&success_message=${successMessage}`;
+      },
+      
+    
+      prefill: {
+        name: "HoodieHub",
+      },
+
+      // if(response.razorpay_payment_id)
+    };
+
+    const PaymentObject = new window.Razorpay(option);
+    PaymentObject.open();
+  };
+
   // const initiatePayment =async() => {
 
   //   let oid = Math.floor(Math.random() * Date.now());
@@ -224,11 +280,12 @@ const Checkout = ({ clearCart, cart, addToCart, removeFromCart, subTotal }) => {
         </ol>
       </div>
       <div className="mx-4">
-        <Link href="https://buy.stripe.com/eVa9Es6OTfla0pyeUV">
-          <button className="flex mr-2 text-white bg-indigo-500 border-0 py-2 px-2 focus:outline-none hover:bg-indigo-500 rounded text-sm">
-            Pay ₹ {subTotal}
-          </button>
-        </Link>
+        <button
+          onClick={() => displayRazorpay(subTotal)}
+          className="flex mr-2 text-white bg-indigo-500 border-0 py-2 px-2 focus:outline-none hover:bg-indigo-500 rounded text-sm"
+        >
+          Pay ₹ {subTotal}
+        </button>
       </div>
     </div>
   );
