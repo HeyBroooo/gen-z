@@ -1,6 +1,5 @@
 import Link from "next/link";
 import React, { useRef } from "react";
-import Image from "next/image";
 import {
   AiOutlineShoppingCart,
   AiFillCloseCircle,
@@ -25,9 +24,9 @@ const Navbar = ({ cart, clearCart, subTotal, removeFromCart, addToCart }) => {
     <div className="flex flex-col md:flex-row md:justify-start justify-center items-center mb-1 py-2 shadow-md sticky top-0 bg-white z-10">
       <div className="logo mx-5">
         <Link legacyBehavior href="/">
-          <a>
-            <Image src="/logo.png" alt="Alt text" width={100} height={50} />
-          </a>
+          
+            <img src="/logo.png" alt="Alt text" width={100} height={50} />
+          
         </Link>
       </div>
       <div className="nav">

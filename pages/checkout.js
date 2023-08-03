@@ -1,10 +1,7 @@
 "use client";
-import Link from "next/link";
+
 import React from "react";
 import { AiFillPlusCircle, AiFillMinusCircle } from "react-icons/ai";
-import { useEffect } from "react";
-import Head from "next/head";
-import Script from "next/script";
 
 const Checkout = ({ clearCart, cart, addToCart, removeFromCart, subTotal }) => {
   const loadScript = (src) => {
@@ -40,18 +37,17 @@ const Checkout = ({ clearCart, cart, addToCart, removeFromCart, subTotal }) => {
       amount: amount * 100,
       name: "HoodieHub",
       description: "Where Your Style Meets Comfort",
-      image: "https://logopond.com/logos/135af52a1edf5f647f853707244622e0.png",
+      img: "/logo.png",
 
       handler: function (response) {
         // Get the payment ID from the response
         const paymentId = response.razorpay_payment_id;
         const successMessage = "Payment Successfully Done";
-      
+
         // Redirect the user to the new page with the payment details as query parameters
         window.location.href = `/payment?razorpay_payment_id=${paymentId}&success_message=${successMessage}`;
       },
-      
-    
+
       prefill: {
         name: "",
       },

@@ -39,7 +39,7 @@ export default function Home() {
                     stroke="currentColor"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeWidth="2"
                     class="w-6 h-6"
                     viewBox="0 0 24 24"
                   >
@@ -63,7 +63,7 @@ export default function Home() {
                     stroke="currentColor"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeWidth="2"
                     class="w-6 h-6"
                     viewBox="0 0 24 24"
                   >
@@ -89,7 +89,7 @@ export default function Home() {
                     stroke="currentColor"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeWidth="2"
                     class="w-6 h-6"
                     viewBox="0 0 24 24"
                   >
@@ -114,7 +114,7 @@ export default function Home() {
                     stroke="currentColor"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeWidth="2"
                     class="w-6 h-6"
                     viewBox="0 0 24 24"
                   >
@@ -138,7 +138,7 @@ export default function Home() {
                     stroke="currentColor"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeWidth="2"
                     class="w-6 h-6"
                     viewBox="0 0 24 24"
                   >
@@ -162,7 +162,7 @@ export default function Home() {
                     stroke="currentColor"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeWidth="2"
                     class="w-6 h-6"
                     viewBox="0 0 24 24"
                   >
@@ -216,7 +216,7 @@ export default function Home() {
                       stroke="currentColor"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      stroke-width="2.5"
+                      strokeWidth="2.5"
                       class="w-3 h-3"
                       viewBox="0 0 24 24"
                     >
@@ -232,7 +232,7 @@ export default function Home() {
                       stroke="currentColor"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      stroke-width="2.5"
+                      strokeWidth="2.5"
                       class="w-3 h-3"
                       viewBox="0 0 24 24"
                     >
@@ -248,7 +248,7 @@ export default function Home() {
                       stroke="currentColor"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      stroke-width="2.5"
+                      strokeWidth="2.5"
                       class="w-3 h-3"
                       viewBox="0 0 24 24"
                     >
@@ -264,7 +264,7 @@ export default function Home() {
                     stroke="currentColor"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeWidth="2"
                     class="w-4 h-4 ml-auto"
                     viewBox="0 0 24 24"
                   >
@@ -297,7 +297,7 @@ export default function Home() {
                       stroke="currentColor"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      stroke-width="2.5"
+                      strokeWidth="2.5"
                       class="w-3 h-3"
                       viewBox="0 0 24 24"
                     >
@@ -313,7 +313,7 @@ export default function Home() {
                       stroke="currentColor"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      stroke-width="2.5"
+                      strokeWidth="2.5"
                       class="w-3 h-3"
                       viewBox="0 0 24 24"
                     >
@@ -329,7 +329,7 @@ export default function Home() {
                       stroke="currentColor"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      stroke-width="2.5"
+                      strokeWidth="2.5"
                       class="w-3 h-3"
                       viewBox="0 0 24 24"
                     >
@@ -345,7 +345,7 @@ export default function Home() {
                       stroke="currentColor"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      stroke-width="2.5"
+                      strokeWidth="2.5"
                       class="w-3 h-3"
                       viewBox="0 0 24 24"
                     >
@@ -361,7 +361,7 @@ export default function Home() {
                     stroke="currentColor"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeWidth="2"
                     class="w-4 h-4 ml-auto"
                     viewBox="0 0 24 24"
                   >
@@ -391,7 +391,7 @@ export default function Home() {
                       stroke="currentColor"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      stroke-width="2.5"
+                      strokeWidth="2.5"
                       class="w-3 h-3"
                       viewBox="0 0 24 24"
                     >
@@ -407,7 +407,7 @@ export default function Home() {
                       stroke="currentColor"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      stroke-width="2.5"
+                      strokeWidth="2.5"
                       class="w-3 h-3"
                       viewBox="0 0 24 24"
                     >
@@ -423,7 +423,7 @@ export default function Home() {
                       stroke="currentColor"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      stroke-width="2.5"
+                      strokeWidth="2.5"
                       class="w-3 h-3"
                       viewBox="0 0 24 24"
                     >
@@ -439,7 +439,7 @@ export default function Home() {
                       stroke="currentColor"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      stroke-width="2.5"
+                      strokeWidth="2.5"
                       class="w-3 h-3"
                       viewBox="0 0 24 24"
                     >
@@ -455,7 +455,7 @@ export default function Home() {
                       stroke="currentColor"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      stroke-width="2.5"
+                      strokeWidth="2.5"
                       class="w-3 h-3"
                       viewBox="0 0 24 24"
                     >
@@ -471,7 +471,7 @@ export default function Home() {
                     stroke="currentColor"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeWidth="2"
                     class="w-4 h-4 ml-auto"
                     viewBox="0 0 24 24"
                   >
@@ -501,7 +501,7 @@ export default function Home() {
                       stroke="currentColor"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      stroke-width="2.5"
+                      strokeWidth="2.5"
                       class="w-3 h-3"
                       viewBox="0 0 24 24"
                     >
@@ -517,7 +517,7 @@ export default function Home() {
                       stroke="currentColor"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      stroke-width="2.5"
+                      strokeWidth="2.5"
                       class="w-3 h-3"
                       viewBox="0 0 24 24"
                     >
@@ -533,7 +533,7 @@ export default function Home() {
                       stroke="currentColor"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      stroke-width="2.5"
+                      strokeWidth="2.5"
                       class="w-3 h-3"
                       viewBox="0 0 24 24"
                     >
@@ -549,7 +549,7 @@ export default function Home() {
                       stroke="currentColor"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      stroke-width="2.5"
+                      strokeWidth="2.5"
                       class="w-3 h-3"
                       viewBox="0 0 24 24"
                     >
@@ -565,7 +565,7 @@ export default function Home() {
                       stroke="currentColor"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      stroke-width="2.5"
+                      strokeWidth="2.5"
                       class="w-3 h-3"
                       viewBox="0 0 24 24"
                     >
@@ -581,7 +581,7 @@ export default function Home() {
                     stroke="currentColor"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeWidth="2"
                     class="w-4 h-4 ml-auto"
                     viewBox="0 0 24 24"
                   >
@@ -620,7 +620,7 @@ export default function Home() {
                     stroke="currentColor"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeWidth="2"
                     class="w-10 h-10"
                     viewBox="0 0 24 24"
                   >
@@ -643,7 +643,7 @@ export default function Home() {
                       stroke="currentColor"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeWidth="2"
                       class="w-4 h-4 ml-2"
                       viewBox="0 0 24 24"
                     >
@@ -659,7 +659,7 @@ export default function Home() {
                     stroke="currentColor"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeWidth="2"
                     class="w-10 h-10"
                     viewBox="0 0 24 24"
                   >
@@ -684,7 +684,7 @@ export default function Home() {
                       stroke="currentColor"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeWidth="2"
                       class="w-4 h-4 ml-2"
                       viewBox="0 0 24 24"
                     >
@@ -700,7 +700,7 @@ export default function Home() {
                     stroke="currentColor"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeWidth="2"
                     class="w-10 h-10"
                     viewBox="0 0 24 24"
                   >
@@ -724,7 +724,7 @@ export default function Home() {
                       stroke="currentColor"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeWidth="2"
                       class="w-4 h-4 ml-2"
                       viewBox="0 0 24 24"
                     >
@@ -832,7 +832,7 @@ export default function Home() {
                     stroke="currentColor"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeWidth="2"
                     class="text-indigo-500 w-12 h-12 mb-3 inline-block"
                     viewBox="0 0 24 24"
                   >
@@ -852,7 +852,7 @@ export default function Home() {
                     stroke="currentColor"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeWidth="2"
                     class="text-indigo-500 w-12 h-12 mb-3 inline-block"
                     viewBox="0 0 24 24"
                   >
@@ -873,7 +873,7 @@ export default function Home() {
                     stroke="currentColor"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeWidth="2"
                     class="text-indigo-500 w-12 h-12 mb-3 inline-block"
                     viewBox="0 0 24 24"
                   >
@@ -893,7 +893,7 @@ export default function Home() {
                     stroke="currentColor"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeWidth="2"
                     class="text-indigo-500 w-12 h-12 mb-3 inline-block"
                     viewBox="0 0 24 24"
                   >
@@ -981,7 +981,7 @@ export default function Home() {
                         fill="currentColor"
                         stroke-linecap="round"
                         stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeWidth="2"
                         class="w-5 h-5"
                         viewBox="0 0 24 24"
                       >
@@ -993,7 +993,7 @@ export default function Home() {
                         fill="currentColor"
                         stroke-linecap="round"
                         stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeWidth="2"
                         class="w-5 h-5"
                         viewBox="0 0 24 24"
                       >
@@ -1006,7 +1006,7 @@ export default function Home() {
                         stroke="currentColor"
                         stroke-linecap="round"
                         stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeWidth="2"
                         class="w-5 h-5"
                         viewBox="0 0 24 24"
                       >
@@ -1026,7 +1026,7 @@ export default function Home() {
                         fill="currentColor"
                         stroke-linecap="round"
                         stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeWidth="2"
                         class="w-5 h-5"
                         viewBox="0 0 24 24"
                       >

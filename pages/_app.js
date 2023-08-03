@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import "../styles/globals.css";
- 
 import LoadingBar from "react-top-loading-bar";
 import { useRouter } from "next/router";
 
@@ -31,6 +30,7 @@ function MyApp({ Component, pageProps }) {
       localStorage.clear();
     }
   }, [router.events]);
+
 
   const saveCart = (myCart) => {
     localStorage.setItem("cart", JSON.stringify(myCart));

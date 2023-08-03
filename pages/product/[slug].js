@@ -48,7 +48,7 @@ const Post = ({ addToCart, product, varients, buyNow }) => {
                     stroke="currentColor"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeWidth="2"
                     class="w-4 h-4 text-indigo-500"
                     viewBox="0 0 24 24"
                   >
@@ -59,7 +59,7 @@ const Post = ({ addToCart, product, varients, buyNow }) => {
                     stroke="currentColor"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeWidth="2"
                     class="w-4 h-4 text-indigo-500"
                     viewBox="0 0 24 24"
                   >
@@ -70,7 +70,7 @@ const Post = ({ addToCart, product, varients, buyNow }) => {
                     stroke="currentColor"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeWidth="2"
                     class="w-4 h-4 text-indigo-500"
                     viewBox="0 0 24 24"
                   >
@@ -81,7 +81,7 @@ const Post = ({ addToCart, product, varients, buyNow }) => {
                     stroke="currentColor"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeWidth="2"
                     class="w-4 h-4 text-indigo-500"
                     viewBox="0 0 24 24"
                   >
@@ -92,7 +92,7 @@ const Post = ({ addToCart, product, varients, buyNow }) => {
                     stroke="currentColor"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeWidth="2"
                     class="w-4 h-4 text-indigo-500"
                     viewBox="0 0 24 24"
                   >
@@ -106,7 +106,7 @@ const Post = ({ addToCart, product, varients, buyNow }) => {
                       fill="currentColor"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeWidth="2"
                       class="w-5 h-5"
                       viewBox="0 0 24 24"
                     >
@@ -118,7 +118,7 @@ const Post = ({ addToCart, product, varients, buyNow }) => {
                       fill="currentColor"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeWidth="2"
                       class="w-5 h-5"
                       viewBox="0 0 24 24"
                     >
@@ -130,7 +130,7 @@ const Post = ({ addToCart, product, varients, buyNow }) => {
                       fill="currentColor"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeWidth="2"
                       class="w-5 h-5"
                       viewBox="0 0 24 24"
                     >
@@ -169,7 +169,7 @@ const Post = ({ addToCart, product, varients, buyNow }) => {
                         stroke="currentColor"
                         stroke-linecap="round"
                         stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeWidth="2"
                         class="w-4 h-4"
                         viewBox="0 0 24 24"
                       >
@@ -215,7 +215,7 @@ const Post = ({ addToCart, product, varients, buyNow }) => {
                     fill="currentColor"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeWidth="2"
                     class="w-5 h-5"
                     viewBox="0 0 24 24"
                   >
