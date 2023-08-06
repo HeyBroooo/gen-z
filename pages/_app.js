@@ -31,7 +31,6 @@ function MyApp({ Component, pageProps }) {
     }
   }, [router.events]);
 
-
   const saveCart = (myCart) => {
     localStorage.setItem("cart", JSON.stringify(myCart));
     let subt = 0;
@@ -103,10 +102,9 @@ function MyApp({ Component, pageProps }) {
         subTotal={subTotal}
         {...pageProps}
       />
-
+      
       <Footer />
     </>
   );
 }
-
 export default MyApp;
