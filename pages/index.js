@@ -1,6 +1,29 @@
 import Head from "next/head";
+import Login from "./login";
+import { useRouter } from "next/router";
+import { useState, useEffect } from "react";
 
 export default function Home() {
+  const router = useRouter();
+
+  // Replace this with your actual authentication logic
+  const [authenticated, setAuthenticated] = useState(false);
+
+  // Simulate a delay for checking authentication status (e.g., API call)
+  useEffect(() => {
+    // Replace this with your actual authentication check logic
+    setTimeout(() => {
+      // Set authenticated to true if the user is logged in
+      setAuthenticated(true);
+    }, 1000); // Simulate a 1-second delay for the example
+  }, []);
+
+  // Redirect to the login page if not authenticated
+  if (!authenticated) {
+    return <Login />;
+  }
+
+
   return (
     <div>
       <Head>
