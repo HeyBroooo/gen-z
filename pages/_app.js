@@ -6,9 +6,7 @@ import LoadingBar from "react-top-loading-bar";
 import { useRouter } from "next/router";
 import { Route, Router } from "react-router-dom";
 import { Switch } from "@nextui-org/react";
-import RedirectToLogin from "./RedirectToLogin";
-import login from "./login";
-import AuthLayout from "./AuthLayout";
+// import AuthLayout from "./AuthLayout";
 
 function MyApp({ Component, pageProps }) {
 
@@ -85,8 +83,13 @@ function MyApp({ Component, pageProps }) {
   };
 
 
+  // <Route path="/add-products" Component={AddProducts} />
+
   return (
-    <AuthLayout>
+ 
+    <>
+    
+    {/* // <AuthLayout> */}
       <LoadingBar
         color="#800080"
         progress={progress}
@@ -112,7 +115,8 @@ function MyApp({ Component, pageProps }) {
       />
 
       <Footer />
-    </AuthLayout>
+      </>
+    // {/* </AuthLayout> */}
   );
 }
 export default MyApp;
