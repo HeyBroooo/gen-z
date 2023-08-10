@@ -1,4 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import {storage, db} from './firebase';
+import {ref, uploadBytesResumable, getDownloadURL} from "firebase/storage";
+import {collection, addDoc} from "firebase/firestore"
 
 const AddProducts = () => {
     
@@ -32,10 +35,40 @@ const AddProducts = () => {
      }
 
 
-     const handleAddProducts = (e) => {
+     const handleAddProducts = async (e) => {
         e.preventDefault();
-        // console.log(title, description, price);
-        // console.log(image);
+         console.log(title, description, price);
+         console.log(image);
+
+        const storageRef = firebase.storage().ref();
+    
+
+
+       const uploadTask = storageRef(`product-image/${image.name}`).put(image);
+       uploadTask.on('state_change', snapshot => {
+        const progress = (snapshot.bytesTransferred / snapshot.totalBytes)*100;
+        console.log(progress);
+       },error=>setUploadError(error.message),()=>{
+        storage.ref('product-images').child(image.name).getDownloadURL().then(url=>{
+            fs.collection('products').add({
+                title,
+                description,
+                price: Number(price),
+                url
+            }).then(()=>{
+                setSuccessMsg('product added successfully');
+                setTitle('');
+                setDescription('');
+                setPrice('');
+                document.getElementById('file').value='';
+                setImageError('');
+                setUploadError('');
+                setTimeout(() => {
+                    setSuccessMsg('');
+                }, 3000);
+            }).catch(error=>setUploadError(error.message));
+        })
+       })
      }
 
   return (
