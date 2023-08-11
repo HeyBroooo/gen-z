@@ -1,7 +1,5 @@
-import React, { useState } from 'react';
-import {storage, db} from './firebase';
-import {ref, uploadBytesResumable, getDownloadURL} from "firebase/storage";
-import {collection, addDoc} from "firebase/firestore"
+import React, { useState } from 'react'
+import { storage } from './firebase';
 
 const AddProducts = () => {
     
@@ -40,11 +38,10 @@ const AddProducts = () => {
          console.log(title, description, price);
          console.log(image);
 
-        const storageRef = firebase.storage().ref();
-    
 
+        const storageRef = storage.ref();
 
-       const uploadTask = storageRef(`product-image/${image.name}`).put(image);
+       const uploadTask = storageRef.child(`product-image/${image.name}`).put(image);
        uploadTask.on('state_change', snapshot => {
         const progress = (snapshot.bytesTransferred / snapshot.totalBytes)*100;
         console.log(progress);
@@ -114,7 +111,8 @@ const AddProducts = () => {
             <br></br>
             <div className='error-msg'>{uploadError}</div>
             
-        </>}
+        </>
+        }
 
 </div>
   )
