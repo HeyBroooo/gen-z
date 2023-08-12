@@ -2,6 +2,8 @@ import Head from "next/head";
 import Login from "./login";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
+import firebase from '../pages/firebase.config';
+
 
 export default function Home() {
   const router = useRouter();

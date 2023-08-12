@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { storage, fs } from './firebase';
+import { storage } from './firebase.config';
+import { ref, uploadBytes } from "firebase/storage";
 
 
 
@@ -35,9 +36,11 @@ const AddProducts = () => {
     console.log(title, description, price);
     console.log(image);
 
-    const StorageRef = firebase.storage().ref();
 
-    const uploadTask = storageRef.child(`product-image/${image.name}`).put(image);
+
+    const StorageRef = ref(storage);
+
+    const uploadTask = StorageRef.child(`product-image/${image.name}`).put(image);
     uploadTask.on(
       "state_change",
       (snapshot) => {

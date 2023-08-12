@@ -4,8 +4,7 @@ import Navbar from "../components/Navbar";
 import "../styles/globals.css";
 import LoadingBar from "react-top-loading-bar";
 import { useRouter } from "next/router";
-import { Route, Router } from "react-router-dom";
-import { Switch } from "@nextui-org/react";
+import firebase from '../pages/firebase.config';
 // import AuthLayout from "./AuthLayout";
 
 function MyApp({ Component, pageProps }) {
