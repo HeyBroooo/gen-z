@@ -4,12 +4,8 @@ import Navbar from "../components/Navbar";
 import "../styles/globals.css";
 import LoadingBar from "react-top-loading-bar";
 import { useRouter } from "next/router";
-import firebase from '../pages/firebase.config';
-// import AuthLayout from "./AuthLayout";
 
 function MyApp({ Component, pageProps }) {
-
-  
   const [cart, setCart] = useState({});
   const [subTotal, setSubTotal] = useState(0);
   const [progress, setProgress] = useState(0);
@@ -81,14 +77,8 @@ function MyApp({ Component, pageProps }) {
     saveCart(newCart);
   };
 
-
-  // <Route path="/add-products" Component={AddProducts} />
-
   return (
- 
     <>
-    
-    {/* // <AuthLayout> */}
       <LoadingBar
         color="#800080"
         progress={progress}
@@ -114,8 +104,7 @@ function MyApp({ Component, pageProps }) {
       />
 
       <Footer />
-      </>
-    // {/* </AuthLayout> */}
+    </>
   );
 }
 export default MyApp;
