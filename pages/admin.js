@@ -17,11 +17,13 @@ const Admin = () => {
 
         // Initialize Firebase (replace with your configuration)
         const firebaseConfig = {
-            apiKey: "YOUR_API_KEY",
-            authDomain: "YOUR_AUTH_DOMAIN",
-            projectId: "YOUR_PROJECT_ID",
-            storageBucket: "YOUR_STORAGE_BUCKET",
-            appId: "YOUR_APP_ID"
+            apiKey: "AIzaSyABIMBD-WPh0P8I4glfgq6EsddCkmgb9Ek",
+            authDomain: "hoodiehub.firebaseapp.com",
+            projectId: "hoodiehub",
+            storageBucket: "hoodiehub.appspot.com",
+            messagingSenderId: "557600069902",
+            appId: "1:557600069902:web:59918565ba0a1fc4b95f5f",
+            measurementId: "G-W72SMZHYQJ",
         };
 
         if (!firebase.apps.length) {
