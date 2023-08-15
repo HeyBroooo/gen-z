@@ -1,70 +1,27 @@
-import React, { useState, useEffect } from "react";
-import { db } from './firebase/firebase';
+import React from 'react'
 
 const FormData = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-
-  const [loader, setLoader] = useState(false);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setLoader(true);
-
-    db.collection("contacts")
-      .add({
-        name: name,
-        email: email,
-        message: message,
-      })
-      .then(() => {
-        setLoader(false);
-        alert("Your message has been submitted👍");
-      })
-      .catch((error) => {
-        alert(error.message);
-        setLoader(false);
-      });
-
-    setName("");
-    setEmail("");
-    setMessage("");
-  };
-
   return (
-    <form className="form" onSubmit={handleSubmit}>
-      <h1>Contact Us 🤳</h1>
+    <div>
+        <h2>Firebase curd operation</h2>
+      
 
-      <label>Name</label>
-      <input
-        placeholder="Name"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-      />
+        <form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>
+    <small id="emailHelp" class="form-text text-muted">We,ll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"/>
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
 
-      <label>Email</label>
-      <input
-        placeholder="Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
+    </div>
+  )
+}
 
-      <label>Message</label>
-      <textarea
-        placeholder="Message"
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
-      ></textarea>
-
-      <button
-        type="submit"
-        style={{ background: loader ? "#ccc" : " rgb(2, 2, 110)" }}
-      >
-        Submit
-      </button>
-    </form>
-  );
-};
-
-export default FormData;
+export default FormData
