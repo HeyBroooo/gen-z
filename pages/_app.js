@@ -6,6 +6,7 @@ import LoadingBar from "react-top-loading-bar";
 import { useRouter } from "next/router";
 
 function MyApp({ Component, pageProps }) {
+  
   const [cart, setCart] = useState({});
   const [subTotal, setSubTotal] = useState(0);
   const [progress, setProgress] = useState(0);

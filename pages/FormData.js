@@ -1,45 +1,70 @@
-import React, { useState }  from 'react';
-import { db } from './firebase';
+import React, { useState, useEffect } from "react";
+import { db } from './firebase/firebase';
 
 const FormData = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
-  const handleSubmit = async (e) => {
-      e.preventDefault();
+  const [loader, setLoader] = useState(false);
 
-      // Add form data to Firestore
-      await db.collection('formData').add({
-          name: name,
-          email: email,
-          timestamp: new Date()
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoader(true);
+
+    db.collection("contacts")
+      .add({
+        name: name,
+        email: email,
+        message: message,
+      })
+      .then(() => {
+        setLoader(false);
+        alert("Your message has been submitted👍");
+      })
+      .catch((error) => {
+        alert(error.message);
+        setLoader(false);
       });
 
-      // Clear the input fields after submission
-      setName('');
-      setEmail('');
+    setName("");
+    setEmail("");
+    setMessage("");
   };
+
   return (
-    <div>
-        <h1>Submit Form Data</h1>
-        <form onSubmit={handleSubmit}>
-            <input
-                type="text"
-                placeholder="Name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-            />
-            <input
-                type="email"
-                placeholder="Email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-            />
-            <button type="submit">Submit</button>
-        </form>
-    </div>
-);
-}
+    <form className="form" onSubmit={handleSubmit}>
+      <h1>Contact Us 🤳</h1>
 
+      <label>Name</label>
+      <input
+        placeholder="Name"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
 
-export default FormData
+      <label>Email</label>
+      <input
+        placeholder="Email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+      />
+
+      <label>Message</label>
+      <textarea
+        placeholder="Message"
+        value={message}
+        onChange={(e) => setMessage(e.target.value)}
+      ></textarea>
+
+      <button
+        type="submit"
+        style={{ background: loader ? "#ccc" : " rgb(2, 2, 110)" }}
+      >
+        Submit
+      </button>
+    </form>
+  );
+};
+
+export default FormData;
