@@ -2,6 +2,7 @@ import React from "react";
 import { SendToFirebase } from "./firebase/function";
 import { useState } from "react";
 
+
 const FormData = () => {
   const [formdata, setformdata] = useState({
     email: "",
@@ -40,9 +41,9 @@ const FormData = () => {
         <div class="form-group">
           <label for="exampleInputPassword1">Password</label>
           <input
-          onChange={(e) =>
-            setformdata({ ...formdata, password: e.target.value })
-          }
+            onChange={(e) =>
+              setformdata({ ...formdata, password: e.target.value })
+            }
             type="password"
             class="form-control"
             id="exampleInputPassword1"

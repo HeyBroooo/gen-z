@@ -1,7 +1,4 @@
 import Head from "next/head";
-import Login from "./login";
-import { useRouter } from "next/router";
-import { useState, useEffect } from "react";
 
 
 export default function Home() {

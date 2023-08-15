@@ -1,11 +1,32 @@
 import React from "react";
+import { useEffect, useState } from "react";
+import { GetAllData } from "./firebase/function";
 
 const GetData = () => {
+  const [first, setfirst] = useState([]);
+
+  useEffect(() => {
+
+    
+    GetAllData("firstCollection").then((docs) => {
+      docs.forEach((doc) => {
+        console.log(doc.id, doc.data());
+        setfirst((first) => [...first, doc.data()]);
+      });
+    });
+  }, []);
+
   return (
-    <>
-      <div>Name:</div>
-      <div>password:</div>
-    </>
+    <div>
+      {first.map((value) => {
+        return(
+        <>
+          <div>Name: {value?.email}</div>
+          <div>password:{value?.password}</div>
+        </>
+        );
+      })}
+    </div>
   );
 };
 

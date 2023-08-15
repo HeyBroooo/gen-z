@@ -1,5 +1,5 @@
 import {app} from "./firebase";
-import { getFirestore, collection, doc, addDoc} from "firebase/firestore";
+import { getFirestore, collection, doc, addDoc, getDocs} from "firebase/firestore";
 
 
 
@@ -18,4 +18,20 @@ export async function SendToFirebase(CollectionName, body) {
     const response = await addDoc(collection(db, CollectionName), body);
 
     return response;
+}
+
+
+
+/**
+ * 
+ * @param {string} CollectionName 
+ * @returns 
+ * 
+ * 
+ */
+
+export const GetAllData  =  async (CollectionName) => {
+     if (!CollectionName) return;
+    const res = await getDocs(collection(db, CollectionName));
+    return res;
 }
