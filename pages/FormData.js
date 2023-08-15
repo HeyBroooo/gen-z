@@ -19,7 +19,7 @@ const FormData = () => {
 
   return (
     <div>
-      <h2>Firebase curd operation</h2>
+      <h2>sending admin like data to firestore</h2>
 
       <div>
         <div class="form-group">
