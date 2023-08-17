@@ -23,6 +23,7 @@ const GetData = () => {
         <>
           <div>Name: {value?.email}</div>
           <div>password:{value?.password}</div>
+          <br></br>
         </>
         );
       })}

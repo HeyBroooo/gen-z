@@ -2,11 +2,11 @@ import React from "react";
 import { SendToFirebase } from "./firebase/function";
 import { useState } from "react";
 
-
 const FormData = () => {
   const [formdata, setformdata] = useState({
     email: "",
     password: "",
+    image: null,
   });
 
   function onSubmit() {
@@ -48,6 +48,18 @@ const FormData = () => {
             class="form-control"
             id="exampleInputPassword1"
             placeholder="Password"
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="imageUpload">Upload Image</label>
+          <input
+            type="file"
+            accept="image/*"
+            id="imageUpload"
+            onChange={(e) =>
+              setformdata({ ...formdata, image: e.target.files[0] })
+            }
+            className="form-control-file"
           />
         </div>
 
