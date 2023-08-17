@@ -14,21 +14,11 @@ const db = getFirestore(app);
  */
 
 
-export async function SendToFirebaseWithImage(CollectionName, body, imageFile) {
-    // Upload image to Firebase Storage and get the image URL/reference
-    const storageRef = ref(storage, "images/" + imageFile.name);
-    await uploadBytes(storageRef, imageFile);
-    const imageUrl = await getDownloadURL(storageRef);
-
-    // Combine image URL/reference with other data
-    const dataWithImage = { ...body, imageUrl };
-
-    // Add the combined data to Firestore
-    const response = await addDoc(collection(db, CollectionName), dataWithImage);
+export async function SendToFirebase(CollectionName, body) {
+    const response = await addDoc(collection(db, CollectionName), body);
 
     return response;
 }
-
 
 
 
