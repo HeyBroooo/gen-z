@@ -59,8 +59,10 @@ const FormData = () => {
             onChange={(e) =>
               setformdata({ ...formdata, image: e.target.files[0] })
             }
+            
             className="form-control-file"
           />
+
         </div>
 
         <button onClick={onSubmit} type="submit" class="btn btn-primary">
