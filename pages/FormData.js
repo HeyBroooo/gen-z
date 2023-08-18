@@ -10,7 +10,7 @@ const FormData = () => {
   });
 
   function onSubmit() {
-    SendToFirebase("firstCollection", formdata)
+    SendToFirebase("Product-Data", formdata)
       .then((res) => {
         console.log("send to Firebase: ", res);
       })
@@ -57,19 +57,22 @@ const FormData = () => {
             accept="image/*"
             id="imageUpload"
             onChange={(e) =>
-              setformdata({ ...formdata, image: e.target.files[0] })
+              setformdata({ ...formdata, image: e.target.value[0] })
             }
             
             className="form-control-file"
           />
-
+              
         </div>
-
+           
         <button onClick={onSubmit} type="submit" class="btn btn-primary">
           Submit
         </button>
+
+        
       </div>
     </div>
+    
   );
 };
 

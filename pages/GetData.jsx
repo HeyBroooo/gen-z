@@ -8,7 +8,7 @@ const GetData = () => {
   useEffect(() => {
 
     
-    GetAllData("firstCollection").then((docs) => {
+    GetAllData("Product-Data").then((docs) => {
       docs.forEach((doc) => {
         console.log(doc.id, doc.data());
         setfirst((first) => [...first, doc.data()]);
