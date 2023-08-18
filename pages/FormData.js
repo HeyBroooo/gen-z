@@ -10,11 +10,26 @@ const FormData = () => {
   });
 
   function onSubmit() {
-    SendToFirebase("Product-Data", formdata)
-      .then((res) => {
-        console.log("send to Firebase: ", res);
-      })
-      .catch((error) => console.log(error));
+    if (formdata.image) {
+      const storageRef = ref(storage, "images/" + formdata.image.name);
+      uploadBytes(storageRef, formdata.image).then(() => {
+        getDownloadURL(storageRef).then((imageUrl) => {
+          const newData = {
+            email: formdata.email,
+            password: formdata.password,
+            image: imageUrl,
+          };
+
+          SendToFirebase("firstCollection", newData)
+            .then((res) => {
+              console.log("send to Firebase: ", res);
+            })
+            .catch((error) => console.log(error));
+        });
+      });
+    } else {
+      console.log("No image selected");
+    }
   }
 
   return (
