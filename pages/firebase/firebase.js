@@ -1,7 +1,4 @@
 import { initializeApp } from "firebase/app";
-import { storage } from "./firebase";
-import { getStorage } from "firebase/storage";
-
 
 
 const firebaseConfig = {
@@ -15,8 +12,5 @@ const firebaseConfig = {
     measurementId: "G-W72SMZHYQJ"
 };
 
- const app = initializeApp(firebaseConfig);
- const storage = getStorage(app);
-
- export { storage, app };
+export const app = initializeApp(firebaseConfig);
 
