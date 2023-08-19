@@ -1,7 +1,8 @@
 import React from "react";
 import { SendToFirebase } from "./firebase/function";
 import { useState } from "react";
-import { ref } from "firebase/storage";
+import { storage } from "./firebase/firebase";
+import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 
 const FormData = () => {
   const [formdata, setformdata] = useState({
@@ -73,7 +74,7 @@ const FormData = () => {
             accept="image/*"
             id="imageUpload"
             onChange={(e) =>
-              setformdata({ ...formdata, image: e.target.value[0] })
+              setformdata({ ...formdata, image: e.target.files[0] })
             }
             
             className="form-control-file"
