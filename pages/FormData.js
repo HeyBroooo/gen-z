@@ -12,6 +12,7 @@ const FormData = () => {
   });
 
   function onSubmit() {
+    console.log("Image:", formdata.image);
     if (formdata.image) {
       const storageRef = ref(storage, "images/" + formdata.image.name);
       uploadBytes(storageRef, formdata.image).then(() => {
@@ -76,20 +77,15 @@ const FormData = () => {
             onChange={(e) =>
               setformdata({ ...formdata, image: e.target.files[0] })
             }
-            
             className="form-control-file"
           />
-              
         </div>
-           
+
         <button onClick={onSubmit} type="submit" class="btn btn-primary">
           Submit
         </button>
-
-        
       </div>
     </div>
-    
   );
 };
 
