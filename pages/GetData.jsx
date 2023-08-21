@@ -27,6 +27,7 @@ const GetData = () => {
         <div key={index}>
           <div>Name: {value?.email}</div>
           <div>Password: {value?.password}</div>
+          <img src={value?.image} alt={`Image for ${value?.email}`} />
           <br />
         </div>
       ))}
