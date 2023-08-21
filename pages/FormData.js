@@ -3,6 +3,8 @@ import { SendToFirebase } from "./firebase/function";
 import { useState } from "react";
 import { storage } from "./firebase/firebase";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import styles from "../styles/FormData.css"
+
 
 const FormData = () => {
   const [formdata, setformdata] = useState({
@@ -36,7 +38,7 @@ const FormData = () => {
   }
 
   return (
-    <div className="form-container">
+    <div className={styles["form-container"]}>
     <h2>Sending Admin-Like Data to Firestore</h2>
 
     <div className="form-group">
@@ -80,7 +82,7 @@ const FormData = () => {
       />
     </div>
 
-    <button onClick={onSubmit} type="submit" className="btn btn-primary">
+    <button onClick={onSubmit} type="submit" className={styles["btn btn-primary"]}>
       Submit
     </button>
   </div>

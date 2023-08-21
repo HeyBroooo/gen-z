@@ -5,6 +5,7 @@ import "../styles/globals.css";
 import LoadingBar from "react-top-loading-bar";
 import { useRouter } from "next/router";
 
+
 function MyApp({ Component, pageProps }) {
   
   const [cart, setCart] = useState({});
