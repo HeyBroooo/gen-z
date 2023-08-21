@@ -23,9 +23,9 @@ const GetData = () => {
   }
 
   return (
-    <div className={styles.productGrid}> {/* Apply a class to style the grid */}
+    <div className={styles.productGrid}>
       {first.map((value, index) => (
-        <div key={index} className={styles.productBox}> {/* Apply a class to style the product box */}
+        <div key={index} className={styles.productBox}> 
           <div className={styles.productImage}>
             <img src={value?.image} alt={`Image for ${value?.image}`} />
           </div>
