@@ -40,7 +40,7 @@ const FormData = () => {
   return (
     <div className={styles["form-container"]}>
     <h2>Sending Admin-Like Data to Firestore</h2>
-
+    <br></br>
     <div className="form-group">
       <label htmlFor="exampleInputEmail1">Email address</label>
       <input
@@ -53,10 +53,8 @@ const FormData = () => {
         aria-describedby="emailHelp"
         placeholder="Enter email"
       />
-      <small id="emailHelp" className="form-text text-muted">
-        We never share your email with anyone else.
-      </small>
     </div>
+        <br></br>
     <div className="form-group">
       <label htmlFor="exampleInputPassword1">Password</label>
       <input
@@ -69,6 +67,7 @@ const FormData = () => {
         placeholder="Password"
       />
     </div>
+    <br></br>
     <div className="form-group">
       <label htmlFor="imageUpload">Upload Image</label>
       <input
@@ -81,7 +80,7 @@ const FormData = () => {
         className="form-control-file"
       />
     </div>
-
+    <br></br>
     <button onClick={onSubmit} type="submit" className={styles["btn btn-primary"]}>
       Submit
     </button>
