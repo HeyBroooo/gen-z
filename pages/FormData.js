@@ -36,56 +36,54 @@ const FormData = () => {
   }
 
   return (
-    <div>
-      <h2>sending admin like data to firestore</h2>
+    <div className="form-container">
+    <h2>Sending Admin-Like Data to Firestore</h2>
 
-      <div>
-        <div class="form-group">
-          <label for="exampleInputEmail1">Email address</label>
-          <input
-            onChange={(e) =>
-              setformdata({ ...formdata, email: e.target.value })
-            }
-            type="email"
-            class="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-            placeholder="Enter email"
-          />
-          <small id="emailHelp" class="form-text text-muted">
-            We,ll never share your email with anyone else.
-          </small>
-        </div>
-        <div class="form-group">
-          <label for="exampleInputPassword1">Password</label>
-          <input
-            onChange={(e) =>
-              setformdata({ ...formdata, password: e.target.value })
-            }
-            type="password"
-            class="form-control"
-            id="exampleInputPassword1"
-            placeholder="Password"
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="imageUpload">Upload Image</label>
-          <input
-            type="file"
-            accept="image/*"
-            id="imageUpload"
-            onChange={(e) =>
-              setformdata({ ...formdata, image: e.target.files[0] })
-            }
-            className="form-control-file"
-          />
-        </div>
-
-        <button onClick={onSubmit} type="submit" class="btn btn-primary">
-          Submit
-        </button>
-      </div>
+    <div className="form-group">
+      <label htmlFor="exampleInputEmail1">Email address</label>
+      <input
+        onChange={(e) =>
+          setformdata({ ...formdata, email: e.target.value })
+        }
+        type="email"
+        className="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        placeholder="Enter email"
+      />
+      <small id="emailHelp" className="form-text text-muted">
+        We never share your email with anyone else.
+      </small>
     </div>
+    <div className="form-group">
+      <label htmlFor="exampleInputPassword1">Password</label>
+      <input
+        onChange={(e) =>
+          setformdata({ ...formdata, password: e.target.value })
+        }
+        type="password"
+        className="form-control"
+        id="exampleInputPassword1"
+        placeholder="Password"
+      />
+    </div>
+    <div className="form-group">
+      <label htmlFor="imageUpload">Upload Image</label>
+      <input
+        type="file"
+        accept="image/*"
+        id="imageUpload"
+        onChange={(e) =>
+          setformdata({ ...formdata, image: e.target.files[0] })
+        }
+        className="form-control-file"
+      />
+    </div>
+
+    <button onClick={onSubmit} type="submit" className="btn btn-primary">
+      Submit
+    </button>
+  </div>
   );
 };
 
