@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { GetAllData } from "./firebase/function";
+import styles from "../styles/GetData.module.css";
 
 const GetData = () => {
   const [first, setFirst] = useState([]);
@@ -22,13 +23,16 @@ const GetData = () => {
   }
 
   return (
-    <div>
+    <div className={styles.productGrid}> {/* Apply a class to style the grid */}
       {first.map((value, index) => (
-        <div key={index}>
-          <div>Name: {value?.email}</div>
-          <div>Password: {value?.password}</div>
-          <img src={value?.image} alt={`Image for ${value?.email}`} />
-          <br />
+        <div key={index} className={styles.productBox}> {/* Apply a class to style the product box */}
+          <div className={styles.productImage}>
+            <img src={value?.image} alt={`Image for ${value?.image}`} />
+          </div>
+          <div className={styles.productInfo}>
+            <div className={styles.productName}>Name: {value?.email}</div>
+            <div className={styles.productPassword}>Password: {value?.password}</div>
+          </div>
         </div>
       ))}
     </div>

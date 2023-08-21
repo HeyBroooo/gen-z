@@ -23,7 +23,7 @@ const FormData = () => {
             image: imageUrl,
           };
 
-          SendToFirebase("firstCollection", newData)
+          SendToFirebase("Product-Data", newData)
             .then((res) => {
               console.log("send to Firebase: ", res);
             })

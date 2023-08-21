@@ -1,0 +1,24 @@
+/* GetData.module.css */
+
+.productGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .productBox {
+    border: 1px solid #ccc;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .productImage img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .productName, .productPassword {
+    margin-top: 10px;
+  }
+  
