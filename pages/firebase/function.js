@@ -8,14 +8,14 @@ const db = getFirestore(app);
 
 /**
  * 
- * @param {String} CollectionName 
+ * @param {String} collection 
  * @param {Object} body 
  * @returns 
  */
 
 
-export async function SendToFirebase(CollectionName, body) {
-    const response = await addDoc(collection(db, CollectionName), body);
+export async function SendToFirebase(collection, body) {
+    const response = await addDoc(collection(db, collection), body);
 
     return response;
 }

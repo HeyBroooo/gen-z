@@ -11,6 +11,7 @@ const FormData = () => {
     email: "",
     password: "",
     image: null,
+    productType: "tshirt",
   });
 
   function onSubmit() {
@@ -23,7 +24,6 @@ const FormData = () => {
             email: formdata.email,
             password: formdata.password,
             image: imageUrl,
-            productType: "tshirt",
           };
 
           SendToFirebase(`${formdata.productType}-collection`, newData)
