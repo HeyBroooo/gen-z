@@ -16,16 +16,17 @@ const FormData = () => {
   function onSubmit() {
     console.log("Image:", formdata.image);
     if (formdata.image) {
-      const storageRef = ref(storage, "images/" + formdata.image.name);
+      const storageRef = ref(storage, `images/${formdata.productType}/${formdata.image.name}`);
       uploadBytes(storageRef, formdata.image).then(() => {
         getDownloadURL(storageRef).then((imageUrl) => {
           const newData = {
             email: formdata.email,
             password: formdata.password,
             image: imageUrl,
+            productType: "tshirt",
           };
 
-          SendToFirebase("Product-Data", newData)
+          SendToFirebase(`${formdata.productType}-collection`, newData)
             .then((res) => {
               console.log("send to Firebase: ", res);
             })
@@ -81,6 +82,20 @@ const FormData = () => {
       />
     </div>
     <br></br>
+    <div className="form-group">
+        <label htmlFor="productType">Product Type</label>
+        <select
+          id="productType"
+          value={formdata.productType}
+          onChange={(e) => setformdata({ ...formdata, productType: e.target.value })}
+          className="form-control"
+        >
+          <option value="tshirt">T-Shirt</option>
+          <option value="hoodie">Hoodie</option>
+          <option value="stickers">Stickers</option>
+        </select>
+      </div>
+      <br></br>
     <button onClick={onSubmit} type="submit" className={styles["btn btn-primary"]}>
       Submit
     </button>
