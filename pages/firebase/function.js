@@ -15,10 +15,15 @@ const db = getFirestore(app);
 
 
 export async function SendToFirebase(CollectionName, body) {
-    const response = await addDoc(collection(db, CollectionName), body);
-
-    return response;
-}
+    try {
+      const response = await addDoc(collection(db, CollectionName), body);
+      return response;
+    } catch (error) {
+      console.error("Error sending data to Firebase:", error);
+      throw error;
+    }
+  }
+  
 
 
 

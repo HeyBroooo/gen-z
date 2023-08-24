@@ -3,7 +3,7 @@ import { SendToFirebase } from "./firebase/function";
 import { useState } from "react";
 import { storage } from "./firebase/firebase";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
-import styles from "../styles/FormData.module.css"
+import styles from "../styles/FormData.module.css";
 
 
 const FormData = () => {
