@@ -36,11 +36,17 @@ export async function SendToFirebase(CollectionName, body) {
  */
 
 export const GetAllData = async (CollectionName) => {
-    if (!CollectionName) return [];
+    try {
+      if (!CollectionName) return [];
   
-    const querySnapshot = await getDocs(collection(db, CollectionName));
-    const dataArray = querySnapshot.docs.map((doc) => doc.data());
+      const querySnapshot = await getDocs(collection(db, CollectionName));
+      const dataArray = querySnapshot.docs.map((doc) => doc.data());
   
-    return dataArray;
+      return dataArray;
+    } catch (error) {
+      console.error("Error fetching data from Firestore:", error);
+      throw error;
+    }
   };
+  
   
