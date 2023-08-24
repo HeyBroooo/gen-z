@@ -26,13 +26,15 @@ const FormData = () => {
             image: imageUrl,
           };
 
-          SendToFirebase(`${formdata.productType}-collection`, newData)
-            .then((res) => {
-              console.log("send to Firebase: ", res);
-            })
-            .catch((error) => console.log(error));
-        });
+          SendToFirebase(`${formdata.productType}-collection`, formdata.productType, newData)
+    .then((res) => {
+      console.log("Sent to Firebase:", res);
+    })
+    .catch((error) => {
+      console.log("Error sending data to Firebase:", error);
+    });
       });
+    });
     } else {
       console.log("No image selected");
     }

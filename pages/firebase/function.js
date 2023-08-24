@@ -14,10 +14,12 @@ const db = getFirestore(app);
  */
 
 
-export async function SendToFirebase(CollectionName, body) {
+export async function SendToFirebase(CollectionName,productType, body) {
     try {
-      const response = await addDoc(collection(db, CollectionName), body);
-      return response;
+        const collectionRef = collection(db, `${productType}-collection`);
+        const response = await addDoc(collectionRef, body);
+
+        return response;
     } catch (error) {
       console.error("Error sending data to Firebase:", error);
       throw error;
@@ -35,18 +37,14 @@ export async function SendToFirebase(CollectionName, body) {
  * 
  */
 
-export const GetAllData = async (CollectionName) => {
-    try {
-      if (!CollectionName) return [];
+export const GetAllData = async (ProductType) => {
+    if (!ProductType) return [];
   
-      const querySnapshot = await getDocs(collection(db, CollectionName));
-      const dataArray = querySnapshot.docs.map((doc) => doc.data());
+    const querySnapshot = await getDocs(collection(db, `${ProductType}-collection`));
+    const dataArray = querySnapshot.docs.map((doc) => doc.data());
   
-      return dataArray;
-    } catch (error) {
-      console.error("Error fetching data from Firestore:", error);
-      throw error;
-    }
+    return dataArray;
   };
+  
   
   

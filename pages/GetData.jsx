@@ -7,16 +7,17 @@ const GetData = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    GetAllData("hoodie-collection")
+    GetAllData("hoodie")
       .then((data) => {
         console.log("Fetched data:", data);
         setFirst(data);
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
-        setError(error); // Set the error state
+        setError(error);
       });
   }, []);
+  
 
   if (error) {
     return <div>Error: {error.message}</div>;
