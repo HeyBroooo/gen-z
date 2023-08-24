@@ -7,7 +7,7 @@ const GetData = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    GetAllData("product-Type")
+    GetAllData("tshirt")
       .then((data) => {
         console.log("Fetched data:", data);
         setFirst(data);
