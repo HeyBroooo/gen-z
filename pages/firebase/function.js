@@ -8,13 +8,13 @@ const db = getFirestore(app);
 
 /**
  * 
- * @param {String} CollectionName 
+ * @param {String} productType 
  * @param {Object} body 
  * @returns 
  */
 
 
-export async function SendToFirebase(CollectionName,productType, body) {
+export async function SendToFirebase(productType, body) {
     try {
         const collectionRef = collection(db, `${productType}-collection`);
         const response = await addDoc(collectionRef, body);
@@ -31,16 +31,16 @@ export async function SendToFirebase(CollectionName,productType, body) {
 
 /**
  * 
- * @param {string} CollectionName 
+ * @param {string} productType
  * @returns 
  * 
  * 
  */
 
-export const GetAllData = async (ProductType) => {
+export const GetAllData = async (productType) => {
     if (!ProductType) return [];
   
-    const querySnapshot = await getDocs(collection(db, `${ProductType}-collection`));
+    const querySnapshot = await getDocs(collection(db, `${productType}-collection`));
     const dataArray = querySnapshot.docs.map((doc) => doc.data());
   
     return dataArray;

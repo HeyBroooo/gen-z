@@ -17,24 +17,33 @@ const FormData = () => {
   function onSubmit() {
     console.log("Image:", formdata.image);
     if (formdata.image) {
-      const storageRef = ref(storage, `images/${formdata.productType}/${formdata.image.name}`);
-      uploadBytes(storageRef, formdata.image).then(() => {
-        getDownloadURL(storageRef).then((imageUrl) => {
+      const storageRef = ref(
+        storage,
+        `images/${formdata.productType}/${formdata.image.name}`
+      );
+      uploadBytes(storageRef, formdata.image)
+        .then(() => {
+          return getDownloadURL(storageRef);
+        })
+        .then((imageUrl) => {
           const newData = {
             email: formdata.email,
             password: formdata.password,
             image: imageUrl,
           };
 
-          SendToFirebase(`${formdata.productType}-collection`, formdata.productType, newData)
-    .then((res) => {
-      console.log("Sent to Firebase:", res);
-    })
-    .catch((error) => {
-      console.log("Error sending data to Firebase:", error);
-    });
-      });
-    });
+          console.log("New Data:", newData);
+          SendToFirebase(formdata.productType, newData)
+            .then((res) => {
+              console.log("Sent to Firebase:", res);
+            })
+            .catch((error) => {
+              console.log("Error sending data to Firebase:", error);
+            });
+        })
+        .catch((error) => {
+          console.log("Error uploading image:", error);
+        });
     } else {
       console.log("No image selected");
     }
