@@ -38,7 +38,7 @@ export async function SendToFirebase(productType, body) {
  */
 
 export const GetAllData = async (productType) => {
-    if (!ProductType) return [];
+    if (!productType) return [];
   
     const querySnapshot = await getDocs(collection(db, `${productType}-collection`));
     const dataArray = querySnapshot.docs.map((doc) => doc.data());
