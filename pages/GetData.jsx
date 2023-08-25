@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { GetAllData } from "./firebase/function";
 import styles from "../styles/GetData.module.css";
+import { useRouter } from "next/router";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-const GetData = ({addToCart}) => {
+const GetData = () => {
   const [first, setFirst] = useState([]);
   const [error, setError] = useState(null);
 
@@ -18,14 +21,46 @@ const GetData = ({addToCart}) => {
       });
   }, []);
 
-  if (error) {
-    return <div>Error: {error.message}</div>;
-  }
+    const [subTotal, setSubTotal] = useState(0);
+
+  const [cart, setCart] = useState({});
+
+  const saveCart = (myCart) => {
+    localStorage.setItem("cart", JSON.stringify(myCart));
+    let subt = 0;
+    let keys = Object.keys(myCart);
+    for (let i = 0; i < keys.length; i++) {
+      subt += myCart[keys[i]].price * myCart[keys[i]].qty;
+    }
+    setSubTotal(subt);
+  };
+
+  const router = useRouter();
+  const { slug } = router.query;
+
+  const addToCart = (itemCode, qty, price, name, size, varaiant) => {
+    let newCart = cart;
+    if (itemCode in cart) {
+      newCart[itemCode].qty = cart[itemCode].qty + qty;
+    } else {
+      newCart[itemCode] = { qty: 1, price, name, size, varaiant };
+    }
+    setCart(newCart);
+    saveCart(newCart);
+  };
+
+  const buyNow = (itemCode, qty, price, name, size, varaiant) => {
+    let newCart = { itemCode: { qty: 1, price, name, size, varaiant } };
+
+    setCart(newCart);
+    saveCart(newCart);
+    router.push("/checkout");
+  };
 
   return (
     <div className={styles.productGrid}>
       {first.map((value, index) => (
-        <div key={index} className={styles.productBox}>
+        <div key={index} className={`${styles.productBox} mb-4 cursor-pointer`}>
           <div className={styles.productImage}>
             <img src={value?.image} alt={`Image for ${value?.image}`} />
           </div>
@@ -35,18 +70,35 @@ const GetData = ({addToCart}) => {
               Password: {value?.password}
             </div>
           </div>
+           <button
+                  onClick={() => {
+                    addToCart(
+                      slug,
+                      1,
+                      499,
+                      "Fashion Meets Comfort(XL, RED)",
+                      "XL",
+                      "RED"
+                    );
+                    toast.success("Added To Cart 😇");
+                  }}
+                  className="flex   text-white bg-indigo-500 border-0 py-2 px-2 md:px-6 focus:outline-none hover:bg-indigo-600 rounded"
+                >
+                  Add to Cart
+                  <ToastContainer />
+                </button>
+                <br />
           <button
-            onClick={() => {
-              addToCart();
-            }}
-          
-            className="flex ml-100 h-10 text-center  text-white bg-indigo-500 border-0 py-2 px-2 md:px-6 focus:outline-none hover:bg-indigo-600 rounded"
-          >Add to Cart</button>
+                  onClick={() => {
+                    buyNow(slug, 1, 499, "Fashion Meets Comfort(XL, RED)");
+                  }}
+                  class="flex  text-white bg-indigo-500 border-0 py-2 px-2 md:px-6 focus:outline-none hover:bg-indigo-600 rounded"
+                >
+                  Buy Now
+                </button>
         </div>
-        
       ))}
     </div>
-    
   );
 };
 
