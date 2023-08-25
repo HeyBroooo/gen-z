@@ -4,6 +4,7 @@ import styles from "../styles/GetData.module.css";
 import { useRouter } from "next/router";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Link from "next/link";
 
 const GetData = () => {
   const [first, setFirst] = useState([]);
@@ -61,6 +62,7 @@ const GetData = () => {
     <div className={styles.productGrid}>
       {first.map((value, index) => (
         <div key={index} className={`${styles.productBox} mb-4 cursor-pointer`}>
+          <Link href={`/product/${value.id}`} key={value.id}>
           <div className={styles.productImage}>
             <img src={value?.image} alt={`Image for ${value?.image}`} />
           </div>
@@ -70,7 +72,7 @@ const GetData = () => {
               Password: {value?.password}
             </div>
           </div>
-
+          </Link>
           <button
             onClick={() => {
               addToCart(
