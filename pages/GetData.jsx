@@ -21,7 +21,7 @@ const GetData = () => {
       });
   }, []);
 
-    const [subTotal, setSubTotal] = useState(0);
+  const [subTotal, setSubTotal] = useState(0);
 
   const [cart, setCart] = useState({});
 
@@ -70,32 +70,33 @@ const GetData = () => {
               Password: {value?.password}
             </div>
           </div>
-           <button
-                  onClick={() => {
-                    addToCart(
-                      slug,
-                      1,
-                      499,
-                      "Fashion Meets Comfort(XL, RED)",
-                      "XL",
-                      "RED"
-                    );
-                    toast.success("Added To Cart 😇");
-                  }}
-                  className="flex   text-white bg-indigo-500 border-0 py-2 px-2 md:px-6 focus:outline-none hover:bg-indigo-600 rounded"
-                >
-                  Add to Cart
-                  <ToastContainer />
-                </button>
-                <br />
+
           <button
-                  onClick={() => {
-                    buyNow(slug, 1, 499, "Fashion Meets Comfort(XL, RED)");
-                  }}
-                  class="flex  text-white bg-indigo-500 border-0 py-2 px-2 md:px-6 focus:outline-none hover:bg-indigo-600 rounded"
-                >
-                  Buy Now
-                </button>
+            onClick={() => {
+              addToCart(
+                slug,
+                1,
+                499,
+                "Fashion Meets Comfort(XL, RED)",
+                "XL",
+                "RED"
+              );
+              toast.success("Added To Cart 😇");
+            }}
+            className="flex   text-white bg-indigo-500 border-0 py-2 px-2 md:px-6 focus:outline-none hover:bg-indigo-600 rounded"
+          >
+            Add to Cart
+            <ToastContainer />
+          </button>
+          <br />
+          <button
+            onClick={() => {
+              buyNow(slug, 1, 499, "Fashion Meets Comfort(XL, RED)");
+            }}
+            class="flex  text-white bg-indigo-500 border-0 py-2 px-2 md:px-6 focus:outline-none hover:bg-indigo-600 rounded"
+          >
+            Buy Now
+          </button>
         </div>
       ))}
     </div>
