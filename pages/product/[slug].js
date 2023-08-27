@@ -2,8 +2,9 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import GetData from "../GetData";
 
-const Post = ({ addToCart, product, buyNow }) => {
+const Post = ({ addToCart, product, buyNow, image }) => {
   const router = useRouter();
   const { slug } = router.query;
   const [pin, SetPin] = useState();
@@ -18,6 +19,9 @@ const Post = ({ addToCart, product, buyNow }) => {
     }
   };
 
+  const [imageURL, setImageURL] = useState("");
+
+
   const onChangePin = (e) => {
     SetPin(e.target.value);
   };
@@ -26,13 +30,21 @@ const Post = ({ addToCart, product, buyNow }) => {
 
   return (
     <>
+
+<div>
+      <Post
+        addToCart={addToCart}
+        image={product?.image} 
+      />
+      </div>
+
       <section class="text-gray-600 body-font overflow-hidden">
         <div class="container px-5 py-16 mx-auto">
           <div class="lg:w-4/5 mx-auto flex flex-wrap">
             <img
               alt="ecommerce"
               class="lg:w-1/2 w-full lg:h-auto px-24 object-cover object-center rounded"
-              src="https://m.media-amazon.com/images/I/613KABeTdwL._UY741_.jpg"
+              src={image}
             />
             <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
               <h2 class="text-sm title-font text-gray-500 tracking-widest">
