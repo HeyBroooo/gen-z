@@ -31,13 +31,7 @@ const Post = ({ addToCart, product, buyNow, image }) => {
   return (
     <>
 
-<div>
-      <Post
-        addToCart={addToCart}
-        image={product?.image} 
-      />
-      </div>
-
+    
       <section class="text-gray-600 body-font overflow-hidden">
         <div class="container px-5 py-16 mx-auto">
           <div class="lg:w-4/5 mx-auto flex flex-wrap">
