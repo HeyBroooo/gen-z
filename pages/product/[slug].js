@@ -1,14 +1,10 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { useState } from "react";
-
 import { ToastContainer, toast } from "react-toastify";
-
 import "react-toastify/dist/ReactToastify.css";
-import { image } from "@nextui-org/react";
 
-
-const Post = ({ addToCart, product, buyNow, productType }) => {
+const Post = ({ addToCart, product, buyNow, productType, image }) => {
   const router = useRouter();
   const { slug } = router.query;
   const [pin, SetPin] = useState();
@@ -23,6 +19,8 @@ const Post = ({ addToCart, product, buyNow, productType }) => {
     }
   };
 
+
+
   const [imageURL, setImageURL] = useState("");
 
 
@@ -30,8 +28,9 @@ const Post = ({ addToCart, product, buyNow, productType }) => {
     SetPin(e.target.value);
   };
 
+ 
   const notify = () => toast.success("Added To Cart");
-
+  console.log( image)
   return (
     <>
 
@@ -42,9 +41,10 @@ const Post = ({ addToCart, product, buyNow, productType }) => {
             <img
               alt="ecommerce"
               class="lg:w-1/2 w-full lg:h-auto px-24 object-cover object-center rounded"
-              src={imageURL}
+              src={image}
             />
-            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+          
+                        <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
               <h2 class="text-sm title-font text-gray-500 tracking-widest">
                 BRAND NAME
               </h2>
