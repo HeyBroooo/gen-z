@@ -1,10 +1,11 @@
+import { image } from "@nextui-org/react";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const Post = ({ addToCart, product, buyNow, productType, image }) => {
+const Post = ({ addToCart, buyNow, productType }) => {
   const router = useRouter();
   const { slug } = router.query;
   const [pin, SetPin] = useState();
@@ -30,7 +31,7 @@ const Post = ({ addToCart, product, buyNow, productType, image }) => {
 
  
   const notify = () => toast.success("Added To Cart");
-  console.log( image)
+ 
   return (
     <>
 
