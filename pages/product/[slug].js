@@ -1,11 +1,12 @@
 import { image } from "@nextui-org/react";
+import { Firestore } from "firebase/firestore";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const Post = ({ addToCart, buyNow, productType }) => {
+const Post = ({ addToCart, buyNow, productType, imageUrl }) => {
   const router = useRouter();
   const { slug } = router.query;
   const [pin, SetPin] = useState();
@@ -22,7 +23,7 @@ const Post = ({ addToCart, buyNow, productType }) => {
 
 
 
-  const [imageURL, setImageURL] = useState("");
+  const [imageURL, setImageURL] = useState(imageUrl);
 
 
   const onChangePin = (e) => {
@@ -42,8 +43,9 @@ const Post = ({ addToCart, buyNow, productType }) => {
             <Image
               alt="ecommerce"
               class="lg:w-1/2 w-full lg:h-auto px-24 object-cover object-center rounded"
-              src={value?.image}
+              src={imageUrl}
             />
+              
           
                         <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
               <h2 class="text-sm title-font text-gray-500 tracking-widest">
