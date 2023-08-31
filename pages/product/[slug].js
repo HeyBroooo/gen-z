@@ -6,6 +6,8 @@ import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+
+
 const Post = ({ addToCart, buyNow, productType, imageUrl }) => {
   const router = useRouter();
   const { slug } = router.query;
