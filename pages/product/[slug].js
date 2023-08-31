@@ -42,7 +42,7 @@ const Post = ({ addToCart, buyNow, productType }) => {
             <Image
               alt="ecommerce"
               class="lg:w-1/2 w-full lg:h-auto px-24 object-cover object-center rounded"
-              src={image}
+              src={value?.image}
             />
           
                         <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">

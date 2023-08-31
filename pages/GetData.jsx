@@ -62,7 +62,7 @@ const GetData = () => {
     <div className={styles.productGrid}>
       {first.map((value, index) => (
         <div key={index} className={`${styles.productBox} mb-4 cursor-pointer`}>
-          <Link href={`/product/${value.id}`} key={value.id}>
+          <Link href={`/product/${value.email}`} key={value.id}>
           <div className={styles.productImage}>
             <img src={value?.image} alt={`Image for ${value?.image}`} />
           </div>
