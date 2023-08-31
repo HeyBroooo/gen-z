@@ -39,7 +39,7 @@ const Post = ({ addToCart, buyNow, productType }) => {
       <section class="text-gray-600 body-font overflow-hidden">
         <div class="container px-5 py-16 mx-auto">
           <div class="lg:w-4/5 mx-auto flex flex-wrap">
-            <img
+            <Image
               alt="ecommerce"
               class="lg:w-1/2 w-full lg:h-auto px-24 object-cover object-center rounded"
               src={image}
