@@ -22,15 +22,10 @@ const Post = ({ addToCart, buyNow, productType, imageUrl }) => {
   };
 
 
-
-  const [imageURL, setImageURL] = useState(imageUrl);
-
-
   const onChangePin = (e) => {
     SetPin(e.target.value);
   };
 
- 
   const notify = () => toast.success("Added To Cart");
  
   return (
@@ -40,12 +35,12 @@ const Post = ({ addToCart, buyNow, productType, imageUrl }) => {
       <section class="text-gray-600 body-font overflow-hidden">
         <div class="container px-5 py-16 mx-auto">
           <div class="lg:w-4/5 mx-auto flex flex-wrap">
-            <Image
+            <img
               alt="ecommerce"
               class="lg:w-1/2 w-full lg:h-auto px-24 object-cover object-center rounded"
               src={imageUrl}
             />
-              
+            
           
                         <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
               <h2 class="text-sm title-font text-gray-500 tracking-widest">
@@ -266,6 +261,7 @@ const Post = ({ addToCart, buyNow, productType, imageUrl }) => {
           </div>
         </div>
       </section>
+      
     </>
   );
 };
