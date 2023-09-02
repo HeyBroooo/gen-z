@@ -57,6 +57,7 @@ const GetData = () => {
     saveCart(newCart);
     router.push("/checkout");
   };
+  ////////////////////////////////
 
   return (
     <div className={styles.productGrid}>
