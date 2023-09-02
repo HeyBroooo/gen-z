@@ -22,6 +22,7 @@ const Post = ({ addToCart, buyNow, productType, imageUrl }) => {
       setService(false);
     }
   };
+  ///
 
 
   const onChangePin = (e) => {
