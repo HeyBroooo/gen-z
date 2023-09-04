@@ -55,29 +55,29 @@ const FormData = () => {
     <h2>Sending Admin-Like Data to Firestore</h2>
     <br></br>
     <div className="form-group">
-      <label htmlFor="exampleInputEmail1">Email address</label>
+      <label htmlFor="exampleInputEmail1">Product Name</label>
       <input
         onChange={(e) =>
           setformdata({ ...formdata, email: e.target.value })
         }
-        type="email"
+        type="text"
         className="form-control"
         id="exampleInputEmail1"
         aria-describedby="emailHelp"
-        placeholder="Enter email"
+        placeholder="Product Name"
       />
     </div>
         <br></br>
     <div className="form-group">
-      <label htmlFor="exampleInputPassword1">Password</label>
+      <label htmlFor="exampleInputPassword1">Price</label>
       <input
         onChange={(e) =>
           setformdata({ ...formdata, password: e.target.value })
         }
-        type="password"
+        type="number"
         className="form-control"
         id="exampleInputPassword1"
-        placeholder="Password"
+        placeholder="Price"
       />
     </div>
     <br></br>
@@ -105,6 +105,7 @@ const FormData = () => {
           <option value="tshirt">T-Shirt</option>
           <option value="hoodie">Hoodie</option>
           <option value="stickers">Stickers</option>
+          <option value="stickers">Mugs</option>
         </select>
       </div>
       <br></br>

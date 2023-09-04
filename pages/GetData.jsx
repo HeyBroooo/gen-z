@@ -68,9 +68,9 @@ const GetData = () => {
             <img src={value?.image} alt={`Image for ${value?.image}`} />
           </div>
           <div className={styles.productInfo}>
-            <div className={styles.productName}>Name: {value?.email}</div>
+            <div className={styles.productName}>Product Name: {value?.email}</div>
             <div className={styles.productPassword}>
-              Password: {value?.password}
+              Price: {value?.password}
             </div>
           </div>
           </Link>
