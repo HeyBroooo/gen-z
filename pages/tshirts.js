@@ -50,7 +50,6 @@ const GetData = () => {
     saveCart(newCart);
   };
 
-  
   const buyNow = (itemCode, qty, price, name, size, varaiant) => {
     let newCart = { itemCode: { qty: 1, price, name, size, varaiant } };
 
@@ -59,21 +58,25 @@ const GetData = () => {
     router.push("/checkout");
   };
 
-
   return (
     <div className={styles.productGrid}>
       {first.map((value, index) => (
         <div key={index} className={`${styles.productBox} mb-4 cursor-pointer`}>
           <Link href={`/product/${value.email}`} key={value.id} passHref>
-          <div className={styles.productImage}>
-            <img src={value?.image} alt={`Image for ${value?.image}`} />
-          </div>
-          <div className={styles.productInfo}>
-            <div className={styles.productName}>Product Name: {value?.email}</div>
-            <div className={styles.productPassword}>
-              Price: {value?.password}
+            <div className={styles.productImage}>
+              <img src={value?.image} alt={`Image for ${value?.image}`} />
             </div>
-          </div>
+            <div className={styles.productInfo}>
+              <div className={styles.productName}>
+                Product Name: {value?.email}
+              </div>
+              <div
+                className={styles.productPassword}
+                style={{ fontWeight: "bold" }}
+              >
+                Price: {value?.password}
+              </div>
+            </div>
           </Link>
           <button
             onClick={() => {
