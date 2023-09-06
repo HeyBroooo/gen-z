@@ -1,193 +1,52 @@
+import React, { useEffect, useState } from "react";
+import { GetAllData } from "./firebase/function";
+import styles from "../styles/GetData.module.css";
+import { useRouter } from "next/router";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Link from "next/link";
-import React from "react";
 
-const Tshirts = () => {
-  return (
-    <div>
-      <section class="text-gray-600 body-font">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="flex flex-wrap -m-4 justify-center">
-            <Link href={"/product/fashion-meets-comfort"}>
-              {" "}
-              <div class="md: p-4 w-full cursor-pointer shadow-lg m-5">
-                <a class="block relative  rounded overflow-hidden">
-                  <img
-                    alt="ecommerce"
-                    class="m-auto md:h-[30vh] m-auto md:h-[30vh] h-[36vh] block"
-                    src="https://m.media-amazon.com/images/I/71eUwDk8z+L._UX569_.jpg"
-                  />
-                </a>
-                <div class="mt-4 text-center">
-                  <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">
-                    T-Shirts
-                  </h3>
-                  <h2 class="text-gray-900 title-font text-lg font-medium">
-                    Fashion Meets Comfort
-                  </h2>
-                  <p class="mt-1">₹16.00</p>
-                  <p class="mt-1">S, M, L, XL, XXL</p>
-                </div>
-              </div>
-            </Link>
-            <Link href={"/product/fashion-meets-comfort"}>
-              {" "}
-              <div class="lg: md: p-4 w-full cursor-pointer shadow-lg m-5">
-                <a class="block relative  rounded overflow-hidden">
-                  <img
-                    alt="ecommerce"
-                    class="m-auto md:h-[30vh] h-[36vh] block"
-                    src="https://m.media-amazon.com/images/I/71eUwDk8z+L._UX569_.jpg"
-                  />
-                </a>
-                <div class="mt-4 text-center">
-                  <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">
-                    T-Shirts
-                  </h3>
-                  <h2 class="text-gray-900 title-font text-lg font-medium">
-                    Fashion Meets Comfort
-                  </h2>
-                  <p class="mt-1">₹16.00</p>
-                  <p class="mt-1">S, M, L, XL, XXL</p>
-                </div>
-              </div>
-            </Link>
-            <Link href={"/product/fashion-meets-comfort"}>
-              {" "}
-              <div class="lg: md: p-4 w-full cursor-pointer shadow-lg m-5">
-                <a class="block relative  rounded overflow-hidden">
-                  <img
-                    alt="ecommerce"
-                    class="m-auto md:h-[30vh] h-[36vh] block"
-                    src="https://m.media-amazon.com/images/I/71eUwDk8z+L._UX569_.jpg"
-                  />
-                </a>
-                <div class="mt-4 text-center">
-                  <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">
-                    T-Shirts
-                  </h3>
-                  <h2 class="text-gray-900 title-font text-lg font-medium">
-                    Neptune
-                  </h2>
-                  <p class="mt-1">₹16.00</p>
-                  <p class="mt-1">S, M, L, XL, XXL</p>
-                </div>
-              </div>
-            </Link>
-            <Link href={"/product/fashion-meets-comfort"}>
-              {" "}
-              <div class="lg: md: p-4 w-full cursor-pointer shadow-lg m-5">
-                <a class="block relative  rounded overflow-hidden">
-                  <img
-                    alt="ecommerce"
-                    class="m-auto md:h-[30vh] h-[36vh] block"
-                    src="https://m.media-amazon.com/images/I/71eUwDk8z+L._UX569_.jpg"
-                  />
-                </a>
-                <div class="mt-4 text-center">
-                  <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">
-                    T-Shirts
-                  </h3>
-                  <h2 class="text-gray-900 title-font text-lg font-medium">
-                    The 400 Blows
-                  </h2>
-                  <p class="mt-1">₹16.00</p>
-                  <p class="mt-1">S, M, L, XL, XXL</p>
-                </div>
-              </div>
-            </Link>
-            <Link href={"/product/fashion-meets-comfort"}>
-              {" "}
-              <div class="lg: md: p-4 w-full cursor-pointer shadow-lg m-5">
-                <a class="block relative  rounded overflow-hidden">
-                  <img
-                    alt="ecommerce"
-                    class="m-auto md:h-[30vh] h-[36vh] block"
-                    src="https://m.media-amazon.com/images/I/71eUwDk8z+L._UX569_.jpg"
-                  />
-                </a>
-                <div class="mt-4 text-center">
-                  <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">
-                    T-Shirts
-                  </h3>
-                  <h2 class="text-gray-900 title-font text-lg font-medium">
-                    The Catalyzer
-                  </h2>
-                  <p class="mt-1">₹16.00</p>
-                  <p class="mt-1">S, M, L, XL, XXL</p>
-                </div>
-              </div>
-            </Link>
-            <Link href={"/product/fashion-meets-comfort"}>
-              {" "}
-              <div class="lg: md: p-4 w-full cursor-pointer shadow-lg m-5">
-                <a class="block relative  rounded overflow-hidden">
-                  <img
-                    alt="ecommerce"
-                    class="m-auto md:h-[30vh] h-[36vh] block"
-                    src="https://m.media-amazon.com/images/I/71eUwDk8z+L._UX569_.jpg"
-                  />
-                </a>
-                <div class="mt-4 text-center">
-                  <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">
-                    T-Shirts
-                  </h3>
-                  <h2 class="text-gray-900 title-font text-lg font-medium">
-                    Fashion Meets Comfort
-                  </h2>
-                  <p class="mt-1">₹16.00</p>
-                  <p class="mt-1">S, M, L, XL, XXL</p>
-                </div>
-              </div>
-            </Link>
-            <Link href={"/product/fashion-meets-comfort"}>
-              {" "}
-              <div class="lg: md: p-4 w-full cursor-pointer shadow-lg m-5">
-                <a class="block relative  rounded overflow-hidden">
-                  <img
-                    alt="ecommerce"
-                    class="m-auto md:h-[30vh] h-[36vh] block"
-                    src="https://m.media-amazon.com/images/I/71eUwDk8z+L._UX569_.jpg"
-                  />
-                </a>
-                <div class="mt-4 text-center">
-                  <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">
-                    T-Shirts
-                  </h3>
-                  <h2 class="text-gray-900 title-font text-lg font-medium">
-                    Neptune
-                  </h2>
-                  <p class="mt-1">₹16.00</p>
-                  <p class="mt-1">S, M, L, XL, XXL</p>
-                </div>
-              </div>
-            </Link>
-            <Link href={"/product/fashion-meets-comfort"}>
-              {" "}
-              <div class="lg: md: p-4 w-full cursor-pointer shadow-lg m-5">
-                <a class="block relative  rounded overflow-hidden">
-                  <img
-                    alt="ecommerce"
-                    class="m-auto md:h-[30vh] h-[36vh] block"
-                    src="https://m.media-amazon.com/images/I/71eUwDk8z+L._UX569_.jpg"
-                  />
-                </a>
-                <div class="mt-4 text-center">
-                  <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">
-                    T-Shirts
-                  </h3>
-                  <h2 class="text-gray-900 title-font text-lg font-medium">
-                    The 400 Blows
-                  </h2>
-                  <p class="mt-1">₹16.00</p>
-                  <p class="mt-1">S, M, L, XL, XXL</p>
-                </div>
-              </div>
-            </Link>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-};
+const GetData = () => {
+  const [first, setFirst] = useState([]);
+  const [error, setError] = useState(null);
 
-export default Tshirts;
+  useEffect(() => {
+    GetAllData("tshirt")
+      .then((data) => {
+        console.log("Fetched data:", data);
+        setFirst(data);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+        setError(error);
+      });
+  }, []);
+
+  const [subTotal, setSubTotal] = useState(0);
+
+  const [cart, setCart] = useState({});
+
+  const saveCart = (myCart) => {
+    localStorage.setItem("cart", JSON.stringify(myCart));
+    let subt = 0;
+    let keys = Object.keys(myCart);
+    for (let i = 0; i < keys.length; i++) {
+      subt += myCart[keys[i]].price * myCart[keys[i]].qty;
+    }
+    setSubTotal(subt);
+  };
+
+  const router = useRouter();
+  const { slug } = router.query;
+
+  const addToCart = (itemCode, qty, price, name, size, varaiant) => {
+    let newCart = cart;
+    if (itemCode in cart) {
+      newCart[itemCode].qty = cart[itemCode].qty + qty;
+    } else {
+      newCart[itemCode] = { qty: 1, price, name, size, varaiant };
+    }
+    setCart(newCart);
+    saveCart(newCart);
+  };
+

@@ -2,10 +2,10 @@ import { image } from "@nextui-org/react";
 import { Firestore } from "firebase/firestore";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
+import { GetAllData } from "../firebase/function";
 
 
 const Post = ({ addToCart, buyNow, productType, imageUrl }) => {
@@ -23,6 +23,26 @@ const Post = ({ addToCart, buyNow, productType, imageUrl }) => {
     }
   };
   
+  useEffect(() => {
+    // Fetch product data based on slug when component mounts
+    if (productType) {
+      GetAllData("tshirt")
+        .then((data) => {
+          // Find the product with matching slug
+          const selectedProduct = data.find((item) => item.image === productType);
+
+          if (selectedProduct) {
+            setProduct(selectedProduct);
+          } else {
+            // Handle the case when the product is not found
+            // You can show an error message or redirect to a 404 page
+          }
+        })
+        .catch((error) => {
+          console.error("Error fetching data:", error);
+        });
+    }
+  }, [productType]);
 
 
   const onChangePin = (e) => {
@@ -41,7 +61,7 @@ const Post = ({ addToCart, buyNow, productType, imageUrl }) => {
             <img
               alt="ecommerce"
               class="lg:w-1/2 w-full lg:h-auto px-24 object-cover object-center rounded"
-              src={imageUrl}
+              src={productType?.image}
             />
             
           
