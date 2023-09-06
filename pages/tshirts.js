@@ -50,3 +50,61 @@ const GetData = () => {
     saveCart(newCart);
   };
 
+  
+  const buyNow = (itemCode, qty, price, name, size, varaiant) => {
+    let newCart = { itemCode: { qty: 1, price, name, size, varaiant } };
+
+    setCart(newCart);
+    saveCart(newCart);
+    router.push("/checkout");
+  };
+
+
+  return (
+    <div className={styles.productGrid}>
+      {first.map((value, index) => (
+        <div key={index} className={`${styles.productBox} mb-4 cursor-pointer`}>
+          <Link href={`/product/${value.email}`} key={value.id} passHref>
+          <div className={styles.productImage}>
+            <img src={value?.image} alt={`Image for ${value?.image}`} />
+          </div>
+          <div className={styles.productInfo}>
+            <div className={styles.productName}>Product Name: {value?.email}</div>
+            <div className={styles.productPassword}>
+              Price: {value?.password}
+            </div>
+          </div>
+          </Link>
+          <button
+            onClick={() => {
+              addToCart(
+                slug,
+                1,
+                499,
+                "Fashion Meets Comfort(XL, RED)",
+                "XL",
+                "RED"
+              );
+              toast.success("Added To Cart 😇");
+            }}
+            className="flex   text-white bg-indigo-500 border-0 py-2 px-2 md:px-6 focus:outline-none hover:bg-indigo-600 rounded"
+          >
+            Add to Cart
+            <ToastContainer />
+          </button>
+          <br />
+          <button
+            onClick={() => {
+              buyNow(slug, 1, 499, "Fashion Meets Comfort(XL, RED)");
+            }}
+            class="flex  text-white bg-indigo-500 border-0 py-2 px-2 md:px-6 focus:outline-none hover:bg-indigo-600 rounded"
+          >
+            Buy Now
+          </button>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default GetData;
