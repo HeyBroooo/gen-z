@@ -23,26 +23,6 @@ const Post = ({ addToCart, buyNow, productType, imageUrl }) => {
     }
   };
   
-  useEffect(() => {
-    // Fetch product data based on slug when component mounts
-    if (productType) {
-      GetAllData("tshirt")
-        .then((data) => {
-          // Find the product with matching slug
-          const selectedProduct = data.find((item) => item.image === productType);
-
-          if (selectedProduct) {
-            setProduct(selectedProduct);
-          } else {
-            // Handle the case when the product is not found
-            // You can show an error message or redirect to a 404 page
-          }
-        })
-        .catch((error) => {
-          console.error("Error fetching data:", error);
-        });
-    }
-  }, [productType]);
 
 
   const onChangePin = (e) => {
