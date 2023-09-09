@@ -105,7 +105,7 @@ const FormData = () => {
           <option value="tshirt">T-Shirt</option>
           <option value="hoodie">Hoodie</option>
           <option value="stickers">Stickers</option>
-          <option value="stickers">Mugs</option>
+          <option value="mugs">Mugs</option>
         </select>
       </div>
       <br></br>
