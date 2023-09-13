@@ -1,11 +1,13 @@
 import Head from "next/head";
-import { Form } from "react-router-dom";
+import emailjs from "emailjs-com";
 
 function formsubmit(e) {
   e.preventDefault();
   console.log("form submitted");
 
-  Email.js.sendForm('service_xovqu5c', )
+  emailjs.sendForm('service_xovqu5c', 'template_kr6rnja', e.target,"8yq2HK5rziP0aaHsd").then(res=>{
+    console.log(res);
+  }).catch(err=>console.log(err));
 }
 
 export default function Home() {
