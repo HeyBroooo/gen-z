@@ -1,5 +1,7 @@
 import Head from "next/head";
 import emailjs from "emailjs-com";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function formsubmit(e) {
   e.preventDefault();
@@ -9,6 +11,9 @@ function formsubmit(e) {
     console.log(res);
   }).catch(err=>console.log(err));
 }
+
+
+const notify = () => toast("Thank you for contacting us!");
 
 export default function Home() {
 
@@ -568,11 +573,12 @@ export default function Home() {
                 
                 <div class="p-2 w-full">
                   
-                  <button class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+                  <button onClick={notify} class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
                     Button
                     
               
                   </button>
+                 < ToastContainer />
                 </div>
                 
                 <div class="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
