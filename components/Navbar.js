@@ -46,11 +46,6 @@ const Navbar = ({ cart, clearCart, subTotal, removeFromCart, addToCart }) => {
               <a>Stickers</a>
             </Link>
           </li>
-          <li>
-            <Link legacyBehavior href="/mugs" passHref>
-              <a>Mugs</a>
-            </Link>
-          </li>
         </ul>
       </div>
       <div
