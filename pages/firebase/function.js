@@ -37,7 +37,7 @@ export async function SendToFirebase(productType, body) {
  * 
  */
 
-export const GetAllData = async (productType) => {
+export default GetAllData = async (productType) => {
     if (!productType) return [];
   
     const querySnapshot = await getDocs(collection(db, `${productType}-collection`));
