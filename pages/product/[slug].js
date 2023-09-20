@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { GetAllData } from "../firebase/function";
+import { GetAllData } from "../api/firebase/function";
 
 
 const Post = ({ addToCart, buyNow, productType, imageUrl }) => {

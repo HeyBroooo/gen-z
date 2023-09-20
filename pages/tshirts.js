@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { GetAllData } from "./firebase/function";
+import { GetAllData } from "./api/firebase/function";
 import styles from "../styles/GetData.module.css";
 import { useRouter } from "next/router";
 import { ToastContainer, toast } from "react-toastify";
