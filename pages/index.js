@@ -353,7 +353,7 @@ export default function Home() {
               <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
                 <div class="h-full text-center">
                   <Image
-                    alt="testimonial"
+                    alt="testimonials"
                     class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
                     src=""
                     width={100}
