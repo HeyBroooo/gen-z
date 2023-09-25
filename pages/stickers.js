@@ -3,7 +3,7 @@ import { GetAllData } from "./api/firebase/function";
 import styles from "../styles/GetData.module.css";
 import { useRouter } from "next/router";
 import { ToastContainer, toast } from "react-toastify";
-import Image from "next/Image";
+import Image from "next/image";
 import "react-toastify/dist/ReactToastify.css";
 import Link from "next/link";
 
