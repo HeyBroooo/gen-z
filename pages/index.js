@@ -2,6 +2,7 @@ import Head from "next/head";
 import emailjs from "emailjs-com";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Image from "next/image";
 
 function formsubmit(e) {
   e.preventDefault();
@@ -351,7 +352,7 @@ export default function Home() {
             <div class="flex flex-wrap -m-4">
               <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
                 <div class="h-full text-center">
-                  <img
+                  <Image
                     alt="testimonial"
                     class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
                     src="https://dummyimage.com/302x302"
@@ -371,7 +372,7 @@ export default function Home() {
               </div>
               <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
                 <div class="h-full text-center">
-                  <img
+                  <Image
                     alt="testimonial"
                     class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
                     src="https://dummyimage.com/300x300"
@@ -391,7 +392,7 @@ export default function Home() {
               </div>
               <div class="lg:w-1/3 lg:mb-0 p-4">
                 <div class="h-full text-center">
-                  <img
+                  <Image
                     alt="testimonial"
                     class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
                     src="https://dummyimage.com/305x305"

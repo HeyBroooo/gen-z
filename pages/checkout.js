@@ -37,7 +37,7 @@ const Checkout = ({ clearCart, cart, addToCart, removeFromCart, subTotal }) => {
       amount: amount * 100,
       name: "HoodieHub",
       description: "Where Your Style Meets Comfort",
-      img: "/logo.png",
+      Image: "/logo.png",
 
       handler: function (response) {
         // Get the payment ID from the response

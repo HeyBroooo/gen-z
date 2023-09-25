@@ -25,7 +25,7 @@ const Navbar = ({ cart, clearCart, subTotal, removeFromCart, addToCart }) => {
       <div className="logo mx-5">
         <Link legacyBehavior href="/">
           
-            <img src="/logo.png" alt="Alt text" width={100} height={50} />
+            <Image src="/logo.png" alt="Alt text" width={100} height={50} />
           
         </Link>
       </div>

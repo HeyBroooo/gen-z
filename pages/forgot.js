@@ -1,11 +1,12 @@
 import React from "react";
+import Image from "next/image";
 
 const forgot = () => {
   return (
     <div>
       <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
         <div class="sm:mx-auto sm:w-full sm:max-w-sm">
-          <img
+          <Image
             class="mx-auto h-10 w-auto"
             src="logo.png?color=indigo&shade=600"
             alt="Your Company"

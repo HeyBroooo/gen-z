@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Link from "next/link";
+import Image from "next/image";
 
 const GetData = () => {
   const [first, setFirst] = useState([]);
@@ -64,7 +65,7 @@ const GetData = () => {
         <div key={index} className={`${styles.productBox} mb-4 cursor-pointer`}>
           <Link href={`/product/${value.email}`} key={value.id} passHref>
             <div className={styles.productImage}>
-              <img src={value?.image} alt={`Image for ${value?.image}`} />
+              <Image src={value?.image} alt={`Image for ${value?.image}`} />
             </div>
             <div className={styles.productInfo}>
               <div className={styles.productName}>

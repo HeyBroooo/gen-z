@@ -53,7 +53,7 @@ const PaymentDetails = ({ paymentId, subTotal}) => {
                   </div>
                 </div>
               </div>
-              <img 
+              <Image 
                 alt="ecommerce"
                 class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
                 src="/order-try.jpg"
