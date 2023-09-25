@@ -1,6 +1,7 @@
 // components/PaymentDetails.js
-import React from "react";
 import Image from "next/Image";
+import React from "react";
+
 
 const PaymentDetails = ({ paymentId, subTotal}) => {
     return (

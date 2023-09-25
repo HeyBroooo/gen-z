@@ -1,6 +1,7 @@
+import Image from "next/Image";
 import Link from "next/link";
 import React, { useRef } from "react";
-import Image from "next/Image";
+
 import {
   AiOutlineShoppingCart,
   AiFillCloseCircle,

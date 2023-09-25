@@ -1,5 +1,6 @@
-import React from "react";
 import Image from "next/Image";
+import React from "react";
+
 
 const forgot = () => {
   return (
