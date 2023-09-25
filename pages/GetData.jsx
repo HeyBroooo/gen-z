@@ -66,7 +66,7 @@ const GetData = () => {
         <div key={index} className={`${styles.productBox} mb-4 cursor-pointer`}>
           <Link href={`/product/${value.email}`} key={value.id} passHref>
           <div className={styles.productImage}>
-            <Image src={value?.image} alt={`Image for ${value?.image}`} />
+            <Image src={value?.image} alt={`image for ${value?.image}`} />
           </div>
           <div className={styles.productInfo}>
             <div className={styles.productName}>Product Name: {value?.email}</div>
