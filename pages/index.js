@@ -2,7 +2,7 @@ import Head from "next/head";
 import emailjs from "emailjs-com";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Image from "next/image";
+import Image from "next/Image";
 
 function formsubmit(e) {
   e.preventDefault();

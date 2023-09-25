@@ -1,6 +1,5 @@
-import { image } from "@nextui-org/react";
+import { Image } from "@nextui-org/react";
 import { Firestore } from "firebase/firestore";
-import Image from "next/image";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
@@ -8,7 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { GetAllData } from "../api/firebase/function";
 
 
-const Post = ({ addToCart, buyNow, productType, imageUrl }) => {
+const Post = ({ addToCart, buyNow, productType, ImageUrl }) => {
   const router = useRouter();
   const { slug } = router.query;
   const [pin, SetPin] = useState();
@@ -41,7 +40,7 @@ const Post = ({ addToCart, buyNow, productType, imageUrl }) => {
             <Image
               alt="ecommerce"
               class="lg:w-1/2 w-full lg:h-auto px-24 object-cover object-center rounded"
-              src={productType?.image}
+              src={productType?.Image}
             />
             
           

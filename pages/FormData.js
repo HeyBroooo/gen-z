@@ -10,26 +10,26 @@ const FormData = () => {
   const [formdata, setformdata] = useState({
     email: "",
     password: "",
-    image: null,
+    Image: null,
     productType: "tshirt",
   });
 
   function onSubmit() {
-    console.log("Image:", formdata.image);
-    if (formdata.image) {
+    console.log("Image:", formdata.Image);
+    if (formdata.Image) {
       const storageRef = ref(
         storage,
-        `images/${formdata.productType}/${formdata.image.name}`
+        `Images/${formdata.productType}/${formdata.Image.name}`
       );
-      uploadBytes(storageRef, formdata.image)
+      uploadBytes(storageRef, formdata.Image)
         .then(() => {
           return getDownloadURL(storageRef);
         })
-        .then((imageUrl) => {
+        .then((ImageUrl) => {
           const newData = {
             email: formdata.email,
             password: formdata.password,
-            image: imageUrl,
+            Image: ImageUrl,
           };
 
           console.log("New Data:", newData);
@@ -42,10 +42,10 @@ const FormData = () => {
             });
         })
         .catch((error) => {
-          console.log("Error uploading image:", error);
+          console.log("Error uploading Image:", error);
         });
     } else {
-      console.log("No image selected");
+      console.log("No Image selected");
     }
   }
 
@@ -82,13 +82,13 @@ const FormData = () => {
     </div>
     <br></br>
     <div className="form-group">
-      <label htmlFor="imageUpload">Upload Image</label>
+      <label htmlFor="ImageUpload">Upload Image</label>
       <input
         type="file"
-        accept="image/*"
-        id="imageUpload"
+        accept="Image/*"
+        id="ImageUpload"
         onChange={(e) =>
-          setformdata({ ...formdata, image: e.target.files[0] })
+          setformdata({ ...formdata, Image: e.target.files[0] })
         }
         className="form-control-file"
       />

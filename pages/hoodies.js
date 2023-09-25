@@ -3,8 +3,8 @@ import { GetAllData } from "./api/firebase/function";
 import styles from "../styles/GetData.module.css";
 import { useRouter } from "next/router";
 import { ToastContainer, toast } from "react-toastify";
+import Image from "next/Image";
 import "react-toastify/dist/ReactToastify.css";
-import Image from "next/image";
 import Link from "next/link";
 
 const GetData = () => {
@@ -64,8 +64,8 @@ const GetData = () => {
       {first.map((value, index) => (
         <div key={index} className={`${styles.productBox} mb-4 cursor-pointer`}>
           <Link href={`/product/${value.email}`} key={value.id} passHref>
-            <div className={styles.productImage}>
-              <Image src={value?.image} alt={`Image for ${value?.image}`} />
+          <div className={styles.productImage} w-48 h-48>
+              <Image src={value?.image} alt={`Image for ${value?.image}`} width={200} height={200}/>
             </div>
             <div className={styles.productInfo}>
               <div className={styles.productName}>

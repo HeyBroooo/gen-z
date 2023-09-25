@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import { GetAllData } from "./api/firebase/function";
 import styles from "../styles/GetData.module.css";
 import { useRouter } from "next/router";
+import Image from "next/Image";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Link from "next/link";
-import Image from "next/image";
 
 const GetData = () => {
   const [first, setFirst] = useState([]);
@@ -64,8 +64,8 @@ const GetData = () => {
       {first.map((value, index) => (
         <div key={index} className={`${styles.productBox} mb-4 cursor-pointer`}>
           <Link href={`/product/${value.email}`} key={value.id} passHref>
-            <div className={styles.productImage}>
-              <Image src={value?.image} alt={`img for ${value?.image}`} />
+            <div className={styles.productImage} w-48 h-48>
+              <Image src={value?.image} alt={`Image for ${value?.image}`} width={200} height={200}/>
             </div>
             <div className={styles.productInfo}>
               <div className={styles.productName}>
