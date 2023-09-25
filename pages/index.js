@@ -33,7 +33,8 @@ export default function Home() {
           height={2000}
           autoPlay
           loop
-          style={{ border: "2px solid #ccc", borderRadius: "8px" }}
+          muted
+          style={{ border: "2px solid #ccc", borderRadius: "8px"}}
         />
       </div>
       <section class="text-gray-600 body-font">
