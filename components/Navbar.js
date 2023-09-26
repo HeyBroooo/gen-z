@@ -77,7 +77,7 @@ const Navbar = ({ cart, clearCart, subTotal, removeFromCart, addToCart }) => {
             const { qty, price, name, size, variant } = cart[k];
             return (
               <li key={k}>
-                <div className="item flex my-5">
+                <div className="item flex my-5 ">
                   <div className="w-2/3 font-semibold">{name}</div>
                   <div className="flex font-semibold items-center justify-center w-1/3 text-lg">
                     <AiFillMinusCircle
