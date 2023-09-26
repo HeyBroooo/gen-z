@@ -74,7 +74,7 @@ const Navbar = ({ cart, clearCart, subTotal, removeFromCart, addToCart }) => {
             <div className="my-4 font-light">Your Cart is Empty!</div>
           )}
           {Object.keys(cart).map((k) => {
-            const { qty, price, name, size, variant } = cart[k];
+            const { qty, name } = cart[k];
             return (
               <li key={k}>
                 <div className="item flex my-5 ">
