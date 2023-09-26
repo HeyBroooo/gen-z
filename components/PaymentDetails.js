@@ -59,6 +59,8 @@ const PaymentDetails = ({ paymentId, subTotal}) => {
                 alt="ecommerce"
                 class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
                 src="/order-try.jpg"
+                height={100}
+                width={100}
                 // style={{ marginTop: '0px' }}
               />
             </div>
