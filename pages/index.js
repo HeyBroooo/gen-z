@@ -351,7 +351,7 @@ export default function Home() {
           <div class="container px-5 py-24 mx-auto">
             <div class="flex flex-wrap -m-4">
               <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
-                <div class="h-full text-center">
+                <div class="h-full text-center hover:scale-110 hover:-translate-y-1 transition ease-in-out delay-150">
                   <Image
                     alt="testimonials"
                     class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
@@ -373,7 +373,7 @@ export default function Home() {
                 </div>
               </div>
               <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
-                <div class="h-full text-center">
+                <div class="h-full text-center hover:scale-110 hover:-translate-y-1 transition ease-in-out delay-150">
                   <Image
                     alt="testimonial"
                     class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
@@ -395,7 +395,7 @@ export default function Home() {
                 </div>
               </div>
               <div class="lg:w-1/3 lg:mb-0 p-4">
-                <div class="h-full text-center">
+                <div class="h-full text-center hover:scale-110 hover:-translate-y-1 transition ease-in-out delay-150">
                   <Image
                     alt="testimonial"
                     class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
@@ -437,7 +437,7 @@ export default function Home() {
             </div>
             <div class="flex flex-wrap -m-4 text-center">
               <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
-                <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                <div class="border-2 border-gray-200 px-4 py-6 rounded-lg hover:scale-110 hover:-translate-y-1 transition ease-in-out delay-150">
                   <svg
                     fill="none"
                     stroke="currentColor"
@@ -457,7 +457,7 @@ export default function Home() {
                 </div>
               </div>
               <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
-                <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                <div class="border-2 border-gray-200 px-4 py-6 rounded-lg hover:scale-110 hover:-translate-y-1 transition ease-in-out delay-150">
                   <svg
                     fill="none"
                     stroke="currentColor"
@@ -478,7 +478,7 @@ export default function Home() {
                 </div>
               </div>
               <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
-                <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                <div class="border-2 border-gray-200 px-4 py-6 rounded-lg hover:scale-110 hover:-translate-y-1 transition ease-in-out delay-150">
                   <svg
                     fill="none"
                     stroke="currentColor"
@@ -498,7 +498,7 @@ export default function Home() {
                 </div>
               </div>
               <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
-                <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                <div class="border-2 border-gray-200 px-4 py-6 rounded-lg hover:scale-110 hover:-translate-y-1 transition ease-in-out delay-150">
                   <svg
                     fill="none"
                     stroke="currentColor"
@@ -579,7 +579,7 @@ export default function Home() {
                   
                 </div>
                 
-                <div class="p-2 w-full">
+                <div class="p-2 w-full hover:scale-110 hover:-translate-y-1 transition ease-in-out delay-150">
                   
                   <button onClick={notify} class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
                     Button
