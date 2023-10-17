@@ -10,8 +10,10 @@ const forgot = () => {
           <Image
             class="mx-auto h-10 w-auto"
             src="logo.png?color=indigo&shade=600"
+            width={100}
+            height={100}
             alt="Your Company"
-            style={{ width: "100px", height: "auto" }}
+            // style={{ width: "100px", height: "100px" }}
           />
           <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
             Forgot Your Password!
