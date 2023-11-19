@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import "../styles/globals.css";
 import LoadingBar from "react-top-loading-bar";
 import { useRouter } from "next/router";
+import { ClerkProvider } from "@clerk/nextjs";
 
 
 function MyApp({ Component, pageProps }) {
@@ -81,6 +82,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
+       <ClerkProvider>
       <LoadingBar
         color="#800080"
         progress={progress}
@@ -106,6 +108,7 @@ function MyApp({ Component, pageProps }) {
       />
 
       <Footer />
+      </ClerkProvider>
     </>
   );
 }
