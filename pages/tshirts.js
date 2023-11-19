@@ -89,6 +89,7 @@ const GetData = () => {
             "XL",
             "RED"
           );
+         
           toast.success("Added To Cart 😇");
         }}
         className="flex text-white bg-indigo-500 border-0 py-2 px-2 md:px-6 focus:outline-none hover:bg-indigo-600 rounded-full"

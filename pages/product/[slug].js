@@ -7,7 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { GetAllData } from "../api/firebase/function";
 
 
-const Post = ({ addToCart, buyNow, productType, ImageUrl }) => {
+const Post = ({ addToCart, buyNow, ImageUrl ,brandname}) => {
   const router = useRouter();
   const { slug } = router.query;
   const [pin, SetPin] = useState();
@@ -40,13 +40,13 @@ const Post = ({ addToCart, buyNow, productType, ImageUrl }) => {
             <Image
               alt="ecommerce"
               class="lg:w-1/2 w-full lg:h-auto px-24 object-cover object-center rounded"
-              src={productType?.Image}
+              src={ImageUrl}
             />
             
           
                         <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
               <h2 class="text-sm title-font text-gray-500 tracking-widest">
-                BRAND NAME
+              brandname
               </h2>
               <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">
                 The Catcher in the Rye
