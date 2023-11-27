@@ -82,7 +82,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-       <ClerkProvider publishableKey="pk_test_ZmluZS10aWNrLTk3LmNsZXJrLmFjY291bnRzLmRldiQ">
+       <ClerkProvider publishableKey={NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}>
       <LoadingBar
         color="#800080"
         progress={progress}
